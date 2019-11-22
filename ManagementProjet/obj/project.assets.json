@@ -13673,11 +13673,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\projects\\ManagementProjet\\ManagementProjet\\ManagementProjet.csproj",
+      "projectUniqueName": "E:\\projects\\GestionCom\\ManagementProjet\\ManagementProjet.csproj",
       "projectName": "ManagementProjet",
-      "projectPath": "E:\\projects\\ManagementProjet\\ManagementProjet\\ManagementProjet.csproj",
+      "projectPath": "E:\\projects\\GestionCom\\ManagementProjet\\ManagementProjet.csproj",
       "packagesPath": "C:\\Users\\Radwa\\.nuget\\packages\\",
-      "outputPath": "E:\\projects\\ManagementProjet\\ManagementProjet\\obj\\",
+      "outputPath": "E:\\projects\\GestionCom\\ManagementProjet\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

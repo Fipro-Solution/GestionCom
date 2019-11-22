@@ -2,54 +2,65 @@
 
 @{
     ViewData["Title"] = "All List";
-    <style>
-        .paddingCard {
-            padding: 10px 10px;
-        }
-    </style>
 }
-    <div class="container">
         <br />
-        <center>
-            <h1> All Users </h1>
-        </center>
-        <a asp-action="Register" asp-controller="Account" class="btn bnt-primary mb-3" style="width:auto">
-            Ajouter Nouveau utilisateur
-        </a>
-        <div class="row">
-            @if (Model.Any())
-            {
+        <div class="card card-solid">
+            <div class="card-body pb-0">
+                <a asp-action="Register" asp-controller="Account" class="btn bg-teal mb-3" style="width:auto">
+                    Ajouter Nouveau utilisateur
+                </a>
+                <div class="row d-flex align-items-stretch">
+                    @if (Model.Any())
+                    {
 
-                foreach (var user in Model)
-                {
-                    <div class="col-xl-6 col-lg-6 col-md-3 col-sm-12 col-12 paddingCard">
-                        <div class="card">
-                            <div class="card-header">
-                                User Id : @user.Id
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    @user.UserName
-                                </h5>
-                            </div>
-                            <div class="card-footer">
-                                <form asp-action="DeleteUser" asp-route-id="@user.Id" method="post">
-                                    <a class="btn btn-outline-success" asp-action="EditUser" asp-controller="Administration" asp-route-id="@user.Id">
-                                        Edit
-                                    </a>
-                                    <button type="submit" class="btn btn-outline-danger">
-                                        Delete
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                }
-            }
-            else
-            {
+                        foreach (var user in Model)
+                        {
 
-            }
+                            <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
+                                <div class="card bg-light">
+                                    <div class="card-header text-muted border-bottom-0">
+                                        @user.Email
+                                    </div>
+                                    <div class="card-body pt-0">
+                                        <div class="row">
+                                            <div class="col-7">
+                                                <h2 class="lead"><b>@user.UserName</b></h2>
+                                                <p class="text-muted text-sm"><b>Nom: </b> @user.FullName </p>
+                                                <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                    <li class="small">
+                                                        <p>
+                                                            <span class="fa-li"><i class="fas fa-lg fa-building"></i></span>Poste : @user.Poste
+                                                        </p>
+                                                    </li>
+                                                    <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Phone : @user.PhoneNumber</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-5 text-center">
+                                                <img src="~/AdminTemplate/dist/img/user-icon-clipart-9.png" alt="" class="img-circle img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="text-right">
+                                            <form asp-action="DeleteUser" asp-route-id="@user.Id" method="post">
+                                                <a class="btn btn-sm bg-teal" asp-action="EditUser" asp-controller="Administration" asp-route-id="@user.Id">
+                                                    <i class="fas fa-comments"></i>
+                                                </a>
+                                                <button type="submit" class="btn btn-sm btn-danger">
+                                                    <i class="fas fa-user"></i> &nbsp;Delete
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+
+                    }
+                </div>
+            </div>
+            <!-- /.card-body -->
         </div>
-
-    </div>

@@ -18,6 +18,21 @@ namespace ManagementProjet.Models.AccountViewModels
         public string UserName { get; set; }
 
         [Required]
+        [StringLength(50)]
+        [Display(Name ="Nom Complet")]
+        public string FullName { get; set; }
+
+        [Required]
+        [StringLength(50)]
+        [Display(Name = "Poste")]
+        public string Poste { get; set; }
+
+        [Required]
+        [Display(Name = "Numéro Téléphone")]
+        [DataType(DataType.PhoneNumber)]
+        public string PhoneNumber { get; set; }
+
+        [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]

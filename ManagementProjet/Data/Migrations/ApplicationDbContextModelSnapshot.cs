@@ -36,6 +36,10 @@ namespace ManagementProjet.Data.Migrations
 
                     b.Property<bool>("EmailConfirmed");
 
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasMaxLength(50);
+
                     b.Property<bool>("LockoutEnabled");
 
                     b.Property<DateTimeOffset?>("LockoutEnd");
@@ -51,6 +55,10 @@ namespace ManagementProjet.Data.Migrations
                     b.Property<string>("PhoneNumber");
 
                     b.Property<bool>("PhoneNumberConfirmed");
+
+                    b.Property<string>("Poste")
+                        .IsRequired()
+                        .HasMaxLength(50);
 
                     b.Property<string>("SecurityStamp");
 
