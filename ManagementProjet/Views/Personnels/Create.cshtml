@@ -1,0 +1,192 @@
+﻿@model ManagementProjet.Models.Personnel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<br />
+
+<div class="container-fluid">
+    <div class="row mb-2">
+        <div class="col-sm-6">
+            <h1>Create Personnel</h1>
+        </div>
+        <div class="col-sm-6">
+            <ol class="breadcrumbv2 breadcrumb float-sm-right ">
+                <li class="breadcrumb-item">
+                    <a href="@Url.Action("Index","Personnels")">
+                        <i class="fas fa-table"></i> List Personnel
+                    </a>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <form asp-action="Create">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="row">
+
+            <!-- left column -->
+            <div class="col-md-6">
+                <!-- general form elements -->
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">information Personnel</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                        <div class="card-body">
+
+                            <div class="form-group">
+                                <label asp-for="Code">Code</label>
+                                <input asp-for="Code" class="form-control" placeholder="Enter Code" />
+                                <span asp-validation-for="Code" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Nom">Nom</label>
+                                <input asp-for="Nom" class="form-control" placeholder="Enter Nom" />
+                                <span asp-validation-for="Nom" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Prenom">Prenom</label>
+                                <input asp-for="Prenom" class="form-control" />
+                                <span asp-validation-for="Prenom" class="text-danger" placeholder="Enter Prenom"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="DateNais">Date Nais</label>
+                                <input asp-for="DateNais" class="form-control" />
+                                <span asp-validation-for="DateNais" class="text-danger" placeholder="Enter Date Nais"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="LieuNais">Lieu Nais</label>
+                                <input asp-for="LieuNais" class="form-control" placeholder="Enter Lieu Nais" />
+                                <span asp-validation-for="LieuNais" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="NumCI">Num CI</label>
+                                <input asp-for="NumCI" class="form-control" placeholder="Enter Lieu Nais" />
+                                <span asp-validation-for="NumCI" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Address">Addresse</label>
+                                <textarea asp-for="Address" class="form-control" rows="3" placeholder="Enter Address"></textarea>
+                                <span asp-validation-for="Address" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+                        <div class="card-footer">
+                            <div class="form-group form-groupMod">
+                                <input type="submit" value="Create" class="btn btn-primary" />
+                            </div>
+                        </div>
+                </div>
+                <!-- /.card -->
+
+            </div>
+            <!--/.col (left) -->
+            <!-- right column -->
+            <div class="col-md-6">
+                <!-- general form elements disabled -->
+                <div class="card card-warning">
+                    <div class="card-header">
+                        <h3 class="card-title">Contrat</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <!-- text input -->
+                                <div class="form-group">
+                                    <label asp-for="Tache">Tache</label>
+                                    <input asp-for="Tache" class="form-control" placeholder="Enter Tache" />
+                                    <span asp-validation-for="Tache" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="MatCnss">Mat Cnss</label>
+                                    <input asp-for="MatCnss" class="form-control" placeholder="Enter Mat Cnss" />
+                                    <span asp-validation-for="MatCnss" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Comment" class="control-label">Commentaire</label>
+                            <textarea asp-for="Comment" class="form-control" rows="3" placeholder="Enter Commentaire"></textarea>
+                            <span asp-validation-for="Comment" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Contrat" class="control-label">Contrat</label>
+                            <select asp-for="Contrat" asp-items="Html.GetEnumSelectList<Contrat>()" class="form-control"></select>
+                            <span asp-validation-for="Contrat" class="text-danger"></span>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="DebutC">Debut Contrat</label>
+                                    <input asp-for="DebutC" class="form-control" placeholder="Enter Debut Contrat" />
+                                    <span asp-validation-for="DebutC" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="FinC">Fin Contrat</label>
+                                    <input asp-for="FinC" class="form-control" placeholder="Enter Fin Contrat" />
+                                    <span asp-validation-for="FinC" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Grade">Grade</label>
+                            <input asp-for="Grade" class="form-control" placeholder="Enter Grade" />
+                            <span asp-validation-for="Grade" class="text-danger"></span>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="Echelle">Echelle</label>
+                                    <input asp-for="Echelle" class="form-control" placeholder="Enter Echelle" />
+                                    <span asp-validation-for="Echelle" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="Echelon">Echelon</label>
+                                    <input asp-for="Echelon" class="form-control" placeholder="Enter Echelon" />
+                                    <span asp-validation-for="Echelon" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="PrimeCA">Prime CA</label>
+                                    <input asp-for="PrimeCA" class="form-control" placeholder="Enter PrimeCA" />
+                                    <span asp-validation-for="PrimeCA" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="Salaire">Salaire</label>
+                                    <input asp-for="Salaire" class="form-control" placeholder="Enter Salaire" />
+                                    <span asp-validation-for="Salaire" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="DateSortie">Date Sortie</label>
+                            <input asp-for="DateSortie" class="form-control" placeholder="Enter Date Sortie" />
+                            <span asp-validation-for="DateSortie" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!--/.col (right) -->
+        </div>
+        <!-- /.row -->
+    </form>
+</div>
+

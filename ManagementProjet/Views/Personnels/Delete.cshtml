@@ -1,0 +1,60 @@
+﻿@model ManagementProjet.Models.Personnel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+<br />
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-primary card-outline">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        <i class="fas fa-edit"></i>
+                        Supprimer Personnel
+                    </h3>
+                </div>
+                <div class="card-body pad table-responsive">
+                    <p>
+                        <b>
+                            Êtes-vous sûr de vouloir supprimer ceci?
+                        </b>
+                    </p>
+                    <p>
+                        <b>@Html.DisplayNameFor(model => model.Code)</b> &nbsp; @Html.DisplayFor(model => model.Code)
+                    </p>
+                    <p>
+                        <b>@Html.DisplayNameFor(model => model.Nom)</b> &nbsp; @Html.DisplayFor(model => model.Nom)
+                    </p>
+                    <p>
+                        <b>@Html.DisplayNameFor(model => model.DateNais)</b> &nbsp; @Html.DisplayFor(model => model.DateNais)
+                    </p>
+                    <p>
+                        <b>@Html.DisplayNameFor(model => model.Address)</b> &nbsp; @Html.DisplayFor(model => model.Address)
+                    </p>
+                    <p>
+                        <b>@Html.DisplayNameFor(model => model.Contrat)</b> &nbsp; @Html.DisplayFor(model => model.Contrat)
+                    </p>
+                    <p>
+                        <b>@Html.DisplayNameFor(model => model.DebutC)</b> &nbsp; @Html.DisplayFor(model => model.DebutC)
+                    </p>
+                    <p>
+                        <b>@Html.DisplayNameFor(model => model.FinC)</b> &nbsp; @Html.DisplayFor(model => model.FinC)
+                    </p>
+                    <p>
+                        <b>@Html.DisplayNameFor(model => model.Salaire)</b> &nbsp; @Html.DisplayFor(model => model.Salaire)
+                    </p>
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="Id" />
+                        <input type="submit" value="Supprimer" class="btn btn-default" /> |
+                        <a asp-action="Index">List Personnel</a>
+                    </form>
+                </div>
+                <!-- /.card -->
+            </div>
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- ./row -->
+
+</div><!-- /.container-fluid -->

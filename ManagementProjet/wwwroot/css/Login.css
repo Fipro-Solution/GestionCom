@@ -1,0 +1,101 @@
+﻿body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.bg {
+    /* The image used */
+    background-image: url('../images/login/login1.jpg');
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.backdiv {
+    background: rgba(4, 4, 4, 0.56);
+    padding:10px;
+}
+.title1{
+    color:white;
+    padding:15px
+}
+.tilteinput{
+    float:left;
+    color:white;
+    font-size:15px;
+    padding-bottom:10px
+}
+.input1 {
+    background: transparent;
+    border-radius: 0;
+    border: 1px solid #fff;
+    color: #fff;
+    height: 45px;
+}
+.icon3 {
+    display: inline-block;
+    position: absolute;
+    right: 35px;
+    margin-top: -35px;
+}
+.icon3 i {
+    color: #ffffff;
+    font-size: 16px;
+}
+.form-control:focus {
+    color: #fff;
+    background-color: transparent;
+    border-color: #fff;
+    outline: 0;
+    box-shadow: none;
+}
+.padding-form {
+    padding: 0px 10px !important;
+}
+.text1 {
+    text-align: left;
+}
+.text2 {
+    text-align: right;
+}
+.buttonLog {
+    width: 100%;
+    border-radius: 0;
+    color: #000;
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+.label_reminber {
+    color: #fff;
+    font-size: 14px;
+}
+.forget_password {
+    color: #fff;
+    text-decoration: none !important;
+    font-size: 14px;
+}
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
+@media screen and (max-width:400){
+    .forget_password {
+        color: #fff;
+        text-decoration: none !important;
+        font-size: 10px;
+    }
+    .label_reminber {
+        color: #fff;
+        font-size: 10px;
+    }
+}

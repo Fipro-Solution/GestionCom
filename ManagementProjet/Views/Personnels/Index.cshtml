@@ -1,0 +1,116 @@
+﻿@model IEnumerable<ManagementProjet.Models.Personnel>
+
+@{
+    ViewData["Title"] = "Index";
+    <!-- dataTables for demo purposes -->
+    <link href="~/AdminTemplate/plugins/datatables-bs4/css/dataTables.bootstrap4.css" rel="stylesheet" />
+}
+<br />
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">List de Personnel</h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+                <table id="example1" class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Code)
+                            </th>
+                            <th>
+                                Nom Complet
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.NumCI)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Contrat)
+                            </th>
+                            <th>
+                                Début Contrat
+                            </th>
+                            <th>
+                                Fin Contrat
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.PrimeCA)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Salaire)
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Code)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Prenom) &nbsp; @Html.DisplayFor(modelItem => item.Nom)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.NumCI)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Contrat)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.DebutC)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.FinC)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.PrimeCA)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Salaire)
+                                </td>
+
+                                <td>
+                                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+    </div>
+    <!-- /.col -->
+</div>
+
+@section Scripts{
+    <!-- dataTables for demo purposes -->
+    <script src="~/AdminTemplate/plugins/datatables/jquery.dataTables.js"></script>
+    <script src="~/AdminTemplate/plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
+    <script>
+        $(function () {
+            $("#example1").DataTable();
+            $('#example2').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+            });
+        });
+
+    </script>
+}
