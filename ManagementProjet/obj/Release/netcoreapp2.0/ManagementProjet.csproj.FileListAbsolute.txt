@@ -10,3 +10,15 @@ E:\projects\ManagementProjet\ManagementProjet\obj\Release\netcoreapp2.0\Manageme
 E:\projects\ManagementProjet\ManagementProjet\obj\Release\netcoreapp2.0\ManagementProjet.AssemblyInfo.cs
 E:\projects\ManagementProjet\ManagementProjet\obj\Release\netcoreapp2.0\ManagementProjet.dll
 E:\projects\ManagementProjet\ManagementProjet\obj\Release\netcoreapp2.0\ManagementProjet.pdb
+E:\projects\GestionCom\ManagementProjet\bin\Release\netcoreapp2.0\ManagementProjet.deps.json
+E:\projects\GestionCom\ManagementProjet\bin\Release\netcoreapp2.0\ManagementProjet.runtimeconfig.json
+E:\projects\GestionCom\ManagementProjet\bin\Release\netcoreapp2.0\ManagementProjet.runtimeconfig.dev.json
+E:\projects\GestionCom\ManagementProjet\bin\Release\netcoreapp2.0\ManagementProjet.dll
+E:\projects\GestionCom\ManagementProjet\bin\Release\netcoreapp2.0\ManagementProjet.pdb
+E:\projects\GestionCom\ManagementProjet\obj\Release\netcoreapp2.0\ManagementProjet.csprojAssemblyReference.cache
+E:\projects\GestionCom\ManagementProjet\obj\Release\netcoreapp2.0\ManagementProjet.csproj.CoreCompileInputs.cache
+E:\projects\GestionCom\ManagementProjet\obj\Release\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+E:\projects\GestionCom\ManagementProjet\obj\Release\netcoreapp2.0\ManagementProjet.AssemblyInfoInputs.cache
+E:\projects\GestionCom\ManagementProjet\obj\Release\netcoreapp2.0\ManagementProjet.AssemblyInfo.cs
+E:\projects\GestionCom\ManagementProjet\obj\Release\netcoreapp2.0\ManagementProjet.dll
+E:\projects\GestionCom\ManagementProjet\obj\Release\netcoreapp2.0\ManagementProjet.pdb

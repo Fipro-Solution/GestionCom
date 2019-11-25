@@ -1,0 +1,109 @@
+﻿@model IEnumerable<ManagementProjet.Models.Agence>
+
+@{
+    ViewData["Title"] = "Index";
+    <link href="~/AdminTemplate/plugins/datatables-bs4/css/dataTables.bootstrap4.css" rel="stylesheet" />
+
+}
+<br />
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">List de Personnel</h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+                <table id="example1" class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.code)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.libelle)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.proprietaire)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.MatFiscale)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Address)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Tel)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.email)
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.code)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.libelle)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.proprietaire)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.MatFiscale)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Address)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Tel)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.email)
+                            </td>
+
+                            <td>
+                                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                            </td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+    </div>
+    <!-- /.col -->
+</div>
+
+@section Scripts{
+    <!-- dataTables for demo purposes -->
+    <script src="~/AdminTemplate/plugins/datatables/jquery.dataTables.js"></script>
+    <script src="~/AdminTemplate/plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
+    <script>
+        $(function () {
+            $("#example1").DataTable();
+            $('#example2').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+            });
+        });
+
+    </script>
+}

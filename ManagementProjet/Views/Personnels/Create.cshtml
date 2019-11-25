@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Create";
+    <link rel="stylesheet" href="~/AdminTemplate/plugins/toastr/toastr.min.css">
 }
 
 <br />
@@ -36,50 +37,50 @@
                     </div>
                     <!-- /.card-header -->
                     <!-- form start -->
-                        <div class="card-body">
+                    <div class="card-body">
 
-                            <div class="form-group">
-                                <label asp-for="Code">Code</label>
-                                <input asp-for="Code" class="form-control" placeholder="Enter Code" />
-                                <span asp-validation-for="Code" class="text-danger"></span>
-                            </div>
-                            <div class="form-group">
-                                <label asp-for="Nom">Nom</label>
-                                <input asp-for="Nom" class="form-control" placeholder="Enter Nom" />
-                                <span asp-validation-for="Nom" class="text-danger"></span>
-                            </div>
-                            <div class="form-group">
-                                <label asp-for="Prenom">Prenom</label>
-                                <input asp-for="Prenom" class="form-control" />
-                                <span asp-validation-for="Prenom" class="text-danger" placeholder="Enter Prenom"></span>
-                            </div>
-                            <div class="form-group">
-                                <label asp-for="DateNais">Date Nais</label>
-                                <input asp-for="DateNais" class="form-control" />
-                                <span asp-validation-for="DateNais" class="text-danger" placeholder="Enter Date Nais"></span>
-                            </div>
-                            <div class="form-group">
-                                <label asp-for="LieuNais">Lieu Nais</label>
-                                <input asp-for="LieuNais" class="form-control" placeholder="Enter Lieu Nais" />
-                                <span asp-validation-for="LieuNais" class="text-danger"></span>
-                            </div>
-                            <div class="form-group">
-                                <label asp-for="NumCI">Num CI</label>
-                                <input asp-for="NumCI" class="form-control" placeholder="Enter Lieu Nais" />
-                                <span asp-validation-for="NumCI" class="text-danger"></span>
-                            </div>
-                            <div class="form-group">
-                                <label asp-for="Address">Addresse</label>
-                                <textarea asp-for="Address" class="form-control" rows="3" placeholder="Enter Address"></textarea>
-                                <span asp-validation-for="Address" class="text-danger"></span>
-                            </div>
+                        <div class="form-group">
+                            <label asp-for="Code">Code</label>
+                            <input asp-for="Code" class="form-control" placeholder="Enter Code" />
+                            <span asp-validation-for="Code" class="text-danger"></span>
                         </div>
-                        <!-- /.card-body -->
-                        <div class="card-footer">
-                            <div class="form-group form-groupMod">
-                                <input type="submit" value="Create" class="btn btn-primary" />
-                            </div>
+                        <div class="form-group">
+                            <label asp-for="Nom">Nom</label>
+                            <input asp-for="Nom" class="form-control" placeholder="Enter Nom" />
+                            <span asp-validation-for="Nom" class="text-danger"></span>
                         </div>
+                        <div class="form-group">
+                            <label asp-for="Prenom">Prenom</label>
+                            <input asp-for="Prenom" class="form-control" />
+                            <span asp-validation-for="Prenom" class="text-danger" placeholder="Enter Prenom"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="DateNais">Date Nais</label>
+                            <input asp-for="DateNais" class="form-control" />
+                            <span asp-validation-for="DateNais" class="text-danger" placeholder="Enter Date Nais"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="LieuNais">Lieu Nais</label>
+                            <input asp-for="LieuNais" class="form-control" placeholder="Enter Lieu Nais" />
+                            <span asp-validation-for="LieuNais" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="NumCI">Num CI</label>
+                            <input asp-for="NumCI" class="form-control" placeholder="Enter Lieu Nais" />
+                            <span asp-validation-for="NumCI" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Address">Addresse</label>
+                            <textarea asp-for="Address" class="form-control" rows="3" placeholder="Enter Address"></textarea>
+                            <span asp-validation-for="Address" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+                    <div class="card-footer">
+                        <div class="form-group form-groupMod">
+                            <input type="submit" value="Create" class="btn btn-primary" />
+                        </div>
+                    </div>
                 </div>
                 <!-- /.card -->
 
@@ -189,4 +190,5 @@
         <!-- /.row -->
     </form>
 </div>
-
+@section Scripts{
+}

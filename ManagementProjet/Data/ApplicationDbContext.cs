@@ -24,5 +24,7 @@ namespace ManagementProjet.Data
         }
 
         public DbSet<ManagementProjet.Models.Personnel> Personnel { get; set; }
+
+        public DbSet<ManagementProjet.Models.Agence> Agence { get; set; }
     }
 }

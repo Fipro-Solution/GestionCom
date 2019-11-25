@@ -1,0 +1,175 @@
+﻿@model ManagementProjet.Models.Agence
+
+@{
+    ViewData["Title"] = "Details";
+}
+<br />
+<div class="container-fluid">
+    <div class="row mb-2">
+        <div class="col-sm-6">
+            <h1>Modifier Agence</h1>
+        </div>
+        <div class="col-sm-6">
+            <ol class="breadcrumbv2 breadcrumb float-sm-right ">
+                <li class="breadcrumb-item">
+                    <a href="@Url.Action("Index","Agences")">
+                        <i class="fas fa-table"></i> List Agences
+                    </a>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card card-default color-palette-box">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        <i class="fas fa-hotel"></i>
+                        Agence
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="col-12">
+                        <h5>@Html.DisplayNameFor(model => model.code) : @Html.DisplayFor(model => model.code) </h5>
+                    </div>
+                    <!-- /.col-12 -->
+                    <!-- /.row -->
+                    <div class="col-12">
+                        <h5>@Html.DisplayNameFor(model => model.libelle) : @Html.DisplayFor(model => model.libelle) </h5>
+                    </div>
+                    <!-- /.col-12 -->
+                    <!-- /.row -->
+                    <div class="col-12">
+                        <h5>@Html.DisplayNameFor(model => model.proprietaire) : @Html.DisplayFor(model => model.proprietaire) </h5>
+                    </div>
+                    <!-- /.col-12 -->
+                    <!-- /.row -->
+                    <div class="col-12">
+                        <h5>@Html.DisplayNameFor(model => model.capital) : @Html.DisplayFor(model => model.capital) </h5>
+                    </div>
+                    <!-- /.col-12 -->
+                    <!-- /.row -->
+                    <div class="col-12">
+                        <h5>@Html.DisplayNameFor(model => model.MatFiscale) : @Html.DisplayFor(model => model.MatFiscale) </h5>
+                    </div>
+                    <!-- /.col-12 -->
+                    <!-- /.row -->
+                    <div class="col-12">
+                        <h5>@Html.DisplayNameFor(model => model.Address) : @Html.DisplayFor(model => model.Address) </h5>
+                    </div>
+                    <!-- /.col-12 -->
+                    <!-- /.row -->
+                    <div class="col-12">
+                        <h5>@Html.DisplayNameFor(model => model.Tel) : @Html.DisplayFor(model => model.Tel) </h5>
+                    </div>
+                    <!-- /.col-12 -->
+                    <!-- /.row -->
+                    <div class="col-12">
+                        <h5>@Html.DisplayNameFor(model => model.Fax) : @Html.DisplayFor(model => model.Fax) </h5>
+                    </div>
+                    <!-- /.col-12 -->
+                    <!-- /.row -->
+                    <div class="col-12">
+                        <h5>@Html.DisplayNameFor(model => model.Telecopie) : @Html.DisplayFor(model => model.Telecopie) </h5>
+                    </div>
+                    <!-- /.col-12 -->
+                </div>
+                <!-- /.card-body -->
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card card-default color-palette-box">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        <i class="fas fa-id-card-alt"></i>
+                        Contact
+                    </h3>
+                </div>
+                <div class="card-body">
+
+                    <!-- /.row -->
+                    <div class="col-12">
+                        <h5>@Html.DisplayNameFor(model => model.email) : @Html.DisplayFor(model => model.email) </h5>
+                    </div>
+                    <!-- /.col-12 -->
+                    <!-- /.row -->
+                    <div class="col-12">
+                        <h5>@Html.DisplayNameFor(model => model.AdrsUrl) : @Html.DisplayFor(model => model.AdrsUrl) </h5>
+                    </div>
+                    <!-- /.col-12 -->
+                    <div class="col-12">
+                        <h5>@Html.DisplayNameFor(model => model.Contact) : @Html.DisplayFor(model => model.Contact) </h5>
+                    </div>
+                    <!-- /.col-12 -->
+                    <!-- /.row -->
+                    <div class="col-12">
+                        <h5>@Html.DisplayNameFor(model => model.TelContact) : @Html.DisplayFor(model => model.TelContact) </h5>
+                    </div>
+                    <!-- /.col-12 -->
+                    <!-- /.row -->
+                    <div class="col-12">
+                        <h5>@Html.DisplayNameFor(model => model.GsmContact) : @Html.DisplayFor(model => model.GsmContact) </h5>
+                    </div>
+                    <!-- /.col-12 -->
+                    <!-- /.row -->
+                    <div class="col-12">
+                        <h5>@Html.DisplayNameFor(model => model.MatCNSS) : @Html.DisplayFor(model => model.MatCNSS) </h5>
+                    </div>
+                    <!-- /.col-12 -->
+                    <!-- /.row -->
+                    <div class="col-12">
+                        <h5>@Html.DisplayNameFor(model => model.Smigar) : @Html.DisplayFor(model => model.Smigar) </h5>
+                    </div>
+                    <!-- /.col-12 -->
+                    <!-- /.row -->
+                    <div class="col-12">
+                        <h5>@Html.DisplayNameFor(model => model.Cnss) : @Html.DisplayFor(model => model.Cnss) </h5>
+                    </div>
+                    <!-- /.col-12 -->
+                </div>
+                <!-- /.card-body -->
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="card card-default color-palette-box">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        <i class="fas fa-user-friends"></i>
+                        Agence
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h5>@Html.DisplayNameFor(model => model.CnssEmployeur) : @Html.DisplayFor(model => model.CnssEmployeur) </h5>
+                        </div>
+                        <div class="col-sm-3">
+                            <h5>@Html.DisplayNameFor(model => model.Fiprolos) : @Html.DisplayFor(model => model.Fiprolos) </h5>
+                        </div>
+                        <div class="col-sm-3">
+                            <h5>@Html.DisplayNameFor(model => model.AccidentTravail) : @Html.DisplayFor(model => model.AccidentTravail) </h5>
+                        </div>
+                        <div class="col-sm-3">
+                            <h5>@Html.DisplayNameFor(model => model.Tfp) : @Html.DisplayFor(model => model.Tfp) </h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.card-body -->
+            </div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+<div>
+    <a class="btn btn-app" asp-action="Edit" asp-route-id="@Model.Id">
+        <i class="fas fa-edit"></i>Modifier
+    </a>
+    <a asp-action="Index" class="btn btn-app">
+        <i class="fas fa-th-list"></i>Enregistrer
+    </a>
+</div>

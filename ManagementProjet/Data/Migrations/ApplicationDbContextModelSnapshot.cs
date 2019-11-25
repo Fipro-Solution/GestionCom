@@ -21,6 +21,71 @@ namespace ManagementProjet.Data.Migrations
                 .HasAnnotation("ProductVersion", "2.0.3-rtm-10026")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("ManagementProjet.Models.Agence", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<float?>("AccidentTravail");
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasMaxLength(20);
+
+                    b.Property<string>("AdrsUrl");
+
+                    b.Property<string>("Cnss");
+
+                    b.Property<float?>("CnssEmployeur");
+
+                    b.Property<string>("Contact")
+                        .HasMaxLength(20);
+
+                    b.Property<string>("Fax");
+
+                    b.Property<float?>("Fiprolos");
+
+                    b.Property<string>("GsmContact");
+
+                    b.Property<string>("MatCNSS");
+
+                    b.Property<string>("MatFiscale")
+                        .IsRequired()
+                        .HasMaxLength(20);
+
+                    b.Property<string>("Smigar")
+                        .HasMaxLength(20);
+
+                    b.Property<string>("Tel")
+                        .IsRequired();
+
+                    b.Property<string>("TelContact");
+
+                    b.Property<string>("Telecopie");
+
+                    b.Property<float?>("Tfp");
+
+                    b.Property<decimal?>("capital");
+
+                    b.Property<string>("code")
+                        .IsRequired();
+
+                    b.Property<string>("email")
+                        .IsRequired();
+
+                    b.Property<string>("libelle")
+                        .IsRequired()
+                        .HasMaxLength(20);
+
+                    b.Property<string>("proprietaire")
+                        .IsRequired()
+                        .HasMaxLength(20);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Agence");
+                });
+
             modelBuilder.Entity("ManagementProjet.Models.ApplicationUser", b =>
                 {
                     b.Property<string>("Id")

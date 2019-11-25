@@ -1,0 +1,59 @@
+﻿@model ManagementProjet.Models.Agence
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<br />
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-primary card-outline">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        <i class="fas fa-edit"></i>
+                        Supprimer Personnel
+                    </h3>
+                </div>
+                <div class="card-body pad table-responsive">
+                    <p>
+                        <b>
+                            Êtes-vous sûr de vouloir supprimer ceci?
+                        </b>
+                    </p>
+                    <p>
+                        <b>@Html.DisplayNameFor(model => model.code)</b> &nbsp; @Html.DisplayFor(model => model.code)
+                    </p>
+                    <p>
+                        <b>@Html.DisplayNameFor(model => model.libelle)</b> &nbsp; @Html.DisplayFor(model => model.libelle)
+                    </p>
+                    <p>
+                        <b>@Html.DisplayNameFor(model => model.proprietaire)</b> &nbsp; @Html.DisplayFor(model => model.proprietaire)
+                    </p>
+                    <p>
+                        <b>@Html.DisplayNameFor(model => model.Address)</b> &nbsp; @Html.DisplayFor(model => model.Address)
+                    </p>
+                    <p>
+                        <b>@Html.DisplayNameFor(model => model.MatFiscale)</b> &nbsp; @Html.DisplayFor(model => model.MatFiscale)
+                    </p>
+                    <p>
+                        <b>@Html.DisplayNameFor(model => model.email)</b> &nbsp; @Html.DisplayFor(model => model.email)
+                    </p>
+                    <p>
+                        <b>@Html.DisplayNameFor(model => model.Tel)</b> &nbsp; @Html.DisplayFor(model => model.Tel)
+                    </p>
+                    
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="Id" />
+                        <input type="submit" value="Supprimer" class="btn btn-danger btn-flat" /> |
+                        <a asp-action="Index">List Agences</a>
+                    </form>
+                </div>
+                <!-- /.card -->
+            </div>
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- ./row -->
+
+</div><!-- /.container-fluid -->

@@ -60,6 +60,7 @@ namespace ManagementProjet.Controllers
             {
                 _context.Add(personnel);
                 await _context.SaveChangesAsync();
+                //TempData["msg"] = "Client Details Edited Successfully";
                 return RedirectToAction(nameof(Index));
             }
             return View(personnel);
