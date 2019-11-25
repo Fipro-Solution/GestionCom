@@ -20,6 +20,10 @@ namespace ManagementProjet.Models.ManageViewModels
         [Display(Name = "Phone number")]
         public string PhoneNumber { get; set; }
 
+        [StringLength(50)]
+        [Display(Name = "Nom Complet")]
+        public string FullName { get; set; }
+
         public string StatusMessage { get; set; }
     }
 }

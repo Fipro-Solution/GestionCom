@@ -57,6 +57,7 @@ namespace Management.Controllers
 
             var model = new IndexViewModel
             {
+                FullName =user.FullName,
                 Username = user.UserName,
                 Email = user.Email,
                 PhoneNumber = user.PhoneNumber,
@@ -101,7 +102,7 @@ namespace Management.Controllers
                     throw new ApplicationException($"Unexpected error occurred setting phone number for user with ID '{user.Id}'.");
                 }
             }
-
+            
             StatusMessage = "Your profile has been updated";
             return RedirectToAction(nameof(Index));
         }
