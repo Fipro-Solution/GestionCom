@@ -1,0 +1,147 @@
+﻿@model IEnumerable<ManagementProjet.Models.Vehicule>
+
+@{
+    ViewData["Title"] = "Index";
+    <link href="~/AdminTemplate/plugins/datatables-bs4/css/dataTables.bootstrap4.css" rel="stylesheet" />
+
+}
+<br />
+<p>
+    <a asp-action="Create">Creation Véhicule</a>
+</p>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">List de Véhicule</h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+                <table id="example1" class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Code)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Libelle)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Actif)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.immatricule)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Etat)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Modele)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Marque)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.DatePMC)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Energie)
+                            </th>
+
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Code)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Libelle)
+                                </td>
+                                <td>
+                                    @if (item.Actif == true)
+                                    {
+                                        <small class="badge badge-success"><i class="far fa-check-circle"></i> Approved </small>
+                                    }
+                                    else
+                                    {
+                                        <small class="badge badge-success"><i class="far fa-clock"></i> Pending </small>
+                                    }
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.immatricule)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Etat)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Modele)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Marque)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.DatePMC)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Energie)
+                                </td>
+                                <td>
+                                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.card-body -->
+        </div>
+    </div>
+</div>
+@section Scripts{
+        <!-- dataTables for demo purposes -->
+        <script src="~/AdminTemplate/plugins/datatables/jquery.dataTables.js"></script>
+        <script src="~/AdminTemplate/plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
+        <script>
+            $(function () {
+                $("#example1").DataTable();
+                $('#example2').DataTable({
+                    "paging": true,
+                    "lengthChange": false,
+                    "searching": false,
+                    "ordering": true,
+                    "info": true,
+                    "autoWidth": false,
+                });
+            });
+            $('#example1').DataTable({
+                language: {
+                    processing: "Traitement en cours...",
+                    search: "Rechercher&nbsp;:",
+                    lengthMenu: "Afficher _MENU_ &eacute;l&eacute;ments",
+                    info: "Affichage de l'&eacute;lement _START_ &agrave; _END_ sur _TOTAL_ &eacute;l&eacute;ments",
+                    infoEmpty: "Affichage de l'&eacute;lement 0 &agrave; 0 sur 0 &eacute;l&eacute;ments",
+                    infoFiltered: "(filtr&eacute; de _MAX_ &eacute;l&eacute;ments au total)",
+                    infoPostFix: "",
+                    loadingRecords: "Chargement en cours...",
+                    zeroRecords: "Aucun &eacute;l&eacute;ment &agrave; afficher",
+                    emptyTable: "Aucune donnée disponible dans le tableau",
+                    paginate: {
+                        first: "Premier",
+                        previous: "Pr&eacute;c&eacute;dent",
+                        next: "Suivant",
+                        last: "Dernier"
+                    },
+                    aria: {
+                        sortAscending: ": activer pour trier la colonne par ordre croissant",
+                        sortDescending: ": activer pour trier la colonne par ordre décroissant"
+                    }
+                }
+            });
+        </script>
+}

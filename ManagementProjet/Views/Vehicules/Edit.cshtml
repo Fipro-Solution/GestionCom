@@ -1,0 +1,624 @@
+﻿@model ManagementProjet.Models.Vehicule
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<br />
+<div class="container-fluid">
+    <div class="row mb-2">
+        <div class="col-sm-6">
+            <h1>Create Vehicule</h1>
+        </div>
+        <div class="col-sm-6">
+            <ol class="breadcrumbv2 breadcrumb float-sm-right ">
+                <li class="breadcrumb-item">
+                    <a href="@Url.Action("Index","Vehicules")">
+                        <i class="fas fa-table"></i> List Vehicule
+                    </a>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <form asp-action="Edit">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-6">
+                <!-- general form elements -->
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Details Générale</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="Code">Code</label>
+                                    <input asp-for="Code" class="form-control" placeholder="Enter code" />
+                                    <span asp-validation-for="Code" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="Libelle">Libelle</label>
+                                    <input asp-for="Libelle" class="form-control" placeholder="Enter Libelle" />
+                                    <span asp-validation-for="Libelle" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="Actif">Actif / Non Actif</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input class="custom-control-input" type="checkbox" data-val="true" data-val-required="The IsChecked field is required." id="Actif" name="Actif" value="true">
+                                    <input name="Actif" type="hidden" value="false">
+                                    <label asp-for="Actif" class="custom-control-label">Actif</label>
+                                    <span asp-validation-for="Actif" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="immatricule">immatricule</label>
+                                    <input asp-for="immatricule" class="form-control" placeholder="Enter Libelle" />
+                                    <span asp-validation-for="immatricule" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label asp-for="Etat">Etat</label>
+                                        <select asp-for="Etat" class="form-control"></select>
+                                        <span asp-validation-for="Etat" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="Fourn" class="control-label"></label>
+                                    <input asp-for="Fourn" class="form-control" placeholder="Enter Fourn." />
+                                    <span asp-validation-for="Fourn" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="Modele">Modele</label>
+                                    <input asp-for="Modele" class="form-control" placeholder="Enter Modele" />
+                                    <span asp-validation-for="Modele" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="Marque">Marque</label>
+                                    <input asp-for="Marque" class="form-control" placeholder="Enter Marque" />
+                                    <span asp-validation-for="Marque" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="Categorie">Categorie</label>
+                                    <input asp-for="Categorie" class="form-control" placeholder="Enter Categorie" />
+                                    <span asp-validation-for="Categorie" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="Couleur">Couleur</label>
+                                    <input asp-for="Couleur" class="form-control" placeholder="Enter Couleur" />
+                                    <span asp-validation-for="Couleur" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="DatePMC">Date PMC</label>
+                                    <input asp-for="DatePMC" class="form-control" placeholder="Enter Date PMC" />
+                                    <span asp-validation-for="DatePMC" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="MantAcqui">Mant Acqui</label>
+                                    <input asp-for="MantAcqui" class="form-control" placeholder="Enter Mant Acqui" />
+                                    <span asp-validation-for="MantAcqui" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="DateAcqui">Date Acqui</label>
+                                    <input asp-for="DateAcqui" class="form-control" placeholder="Enter Date Acqui" />
+                                    <span asp-validation-for="DateAcqui" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="DateFinG">Date Fin G</label>
+                                    <input asp-for="DateFinG" class="form-control" placeholder="Enter Date FinG" />
+                                    <span asp-validation-for="DateFinG" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+
+
+                <div class="card card-danger">
+                    <div class="card-header">
+                        <h3 class="card-title">Réference des roues</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <!-- text input -->
+                                <div class="form-group">
+                                    <label asp-for="AVG"></label>
+                                    <input asp-for="AVG" class="form-control" placeholder="Enter AVG" />
+                                    <span asp-validation-for="AVG" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="AVD"></label>
+                                    <input asp-for="AVD" class="form-control" placeholder="Enter AVD" />
+                                    <span asp-validation-for="AVD" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <!-- text input -->
+                                <div class="form-group">
+                                    <label asp-for="ARG"></label>
+                                    <input asp-for="ARG" class="form-control" placeholder="Enter ARG" />
+                                    <span asp-validation-for="ARG" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="ARD"></label>
+                                    <input asp-for="ARD" class="form-control" placeholder="Enter ARD" />
+                                    <span asp-validation-for="ARD" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Secour"></label>
+                            <input asp-for="Secour" class="form-control" placeholder="Enter Secour" />
+                            <span asp-validation-for="Secour" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+                <!-- Valeur Form -->
+                <div class="card card-info">
+                    <div class="card-header">
+                        <h3 class="card-title">Valeur Form</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <!-- text input -->
+                                <div class="form-group">
+                                    <label asp-for="Restant" class="control-label"></label>
+                                    <input asp-for="Restant" class="form-control" placeholder="Enter Restant" />
+                                    <span asp-validation-for="Restant" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="Amortis"></label>
+                                    <input asp-for="Amortis" class="form-control" placeholder="Enter Amortis" />
+                                    <span asp-validation-for="Amortis" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <!-- text input -->
+                                <div class="form-group">
+                                    <label asp-for="Accessoire" class="control-label"></label>
+                                    <input asp-for="Accessoire" class="form-control" placeholder="Enter Accessoire" />
+                                    <span asp-validation-for="Accessoire" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="Taxe"></label>
+                                    <input asp-for="Taxe" class="form-control" placeholder="Enter Taxe" />
+                                    <span asp-validation-for="Taxe" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+
+                </div>
+                <!-- /.card -->
+                <!-- Observation Form -->
+                <div class="card card-success">
+                    <div class="card-header">
+                        <h3 class="card-title">Observation Form</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <div class="card-body">
+                        <!-- text input -->
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="Observation" class="control-label"></label>
+                                    <input asp-for="Observation" class="form-control" placeholder="Enter Observation" />
+                                    <span asp-validation-for="Observation" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="Vendue">Vendue / Non </label>
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" data-val="true" data-val-required="The IsChecked field is required." id="Vendue" name="Vendue" value="true">
+                                        <input name="Vendue" type="hidden" value="false">
+                                        <label asp-for="Vendue" class="custom-control-label">Vendue</label>
+                                        <span asp-validation-for="Vendue" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.card -->
+            </div>
+            <!--/.col (left) -->
+            <!-- right column -->
+            <div class="col-md-6">
+                <!-- general form elements disabled -->
+                <div class="card card-warning">
+                    <div class="card-header">
+                        <h3 class="card-title">Details Véhicules</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <!-- text input -->
+                                <div class="form-group">
+                                    <label asp-for="Nchassis"></label>
+                                    <input asp-for="Nchassis" class="form-control" placeholder="Enter Nchassis" />
+                                    <span asp-validation-for="Nchassis" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="NMoteur"></label>
+                                    <input asp-for="NMoteur" class="form-control" placeholder="Enter NMoteur" />
+                                    <span asp-validation-for="NMoteur" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <!-- text input -->
+                                <div class="form-group">
+                                    <label asp-for="immatricule"></label>
+                                    <input asp-for="immatricule" class="form-control" placeholder="Enter immatricule" />
+                                    <span asp-validation-for="immatricule" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="Cylindree"></label>
+                                    <input asp-for="Cylindree" class="form-control" placeholder="Enter Cylindree" />
+                                    <span asp-validation-for="Cylindree" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <!-- text input -->
+                                <div class="form-group">
+                                    <label asp-for="PoidsVide"></label>
+                                    <input asp-for="PoidsVide" class="form-control" placeholder="Enter Poids Vide" />
+                                    <span asp-validation-for="PoidsVide" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="PoidsUtile"></label>
+                                    <input asp-for="PoidsUtile" class="form-control" placeholder="Enter Poids Utile" />
+                                    <span asp-validation-for="PoidsUtile" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <!-- text input -->
+                                <div class="form-group">
+                                    <label asp-for="Energie">Etat</label>
+                                    <select asp-for="Energie" class="form-control"></select>
+                                    <span asp-validation-for="Energie" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="puissance"></label>
+                                    <input asp-for="puissance" class="form-control" placeholder="Enter Puissance" />
+                                    <span asp-validation-for="puissance" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+                <!-- general form elements disabled -->
+                <div class="card card-secondary">
+                    <div class="card-header">
+                        <h3 class="card-title">Nbr de place</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label asp-for="Debout" class="control-label"></label>
+                            <input asp-for="Debout" class="form-control" placeholder=" Enter Debout" />
+                            <span asp-validation-for="Debout" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Assise" class="control-label"></label>
+                            <input asp-for="Assise" class="form-control" placeholder=" Enter Assise" />
+                            <span asp-validation-for="Assise" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+                <!-- Form Element sizes -->
+                <div class="card card-success">
+                    <div class="card-header">
+                        <h3 class="card-title">Different Height</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <!-- text input -->
+                                <div class="form-group">
+                                    <label asp-for="theorique" class="control-label"></label>
+                                    <input asp-for="theorique" class="form-control" placeholder="Enter theorique" />
+                                    <span asp-validation-for="theorique" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="Pratique"></label>
+                                    <input asp-for="Pratique" class="form-control" placeholder="Enter Pratique" />
+                                    <span asp-validation-for="Pratique" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Options</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="climatise">Climatisée / Non </label>
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" data-val="true" data-val-required="The IsChecked field is required." id="climatise" name="climatise" value="true">
+                                        <input name="climatise" type="hidden" value="false">
+                                        <label asp-for="climatise" class="custom-control-label">Climatisée</label>
+                                        <span asp-validation-for="climatise" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="FermetureCentrale">Fermeture Centrale / Non </label>
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" data-val="true" data-val-required="The IsChecked field is required." id="FermetureCentrale" name="FermetureCentrale" value="true">
+                                        <input name="FermetureCentrale" type="hidden" value="false">
+                                        <label asp-for="FermetureCentrale" class="custom-control-label">Fermeture Centrale</label>
+                                        <span asp-validation-for="FermetureCentrale" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="Alarme">Alarme / Non Alarme</label>
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" data-val="true" data-val-required="The IsChecked field is required." id="Alarme" name="Alarme" value="true">
+                                        <input name="Alarme" type="hidden" value="false">
+                                        <label asp-for="Alarme" class="custom-control-label">Alarme</label>
+                                        <span asp-validation-for="Alarme" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="FermetureCentrale">Saloncuir / Non Saloncuir</label>
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" data-val="true" data-val-required="The IsChecked field is required." id="Saloncuir" name="Saloncuir" value="true">
+                                        <input name="Saloncuir" type="hidden" value="false">
+                                        <label asp-for="Saloncuir" class="custom-control-label">Saloncuir</label>
+                                        <span asp-validation-for="Saloncuir" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="Alarme">Demarrage Code / Non</label>
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" data-val="true" data-val-required="The IsChecked field is required." id="DemarrageCode" name="DemarrageCode" value="true">
+                                        <input name="DemarrageCode" type="hidden" value="false">
+                                        <label asp-for="DemarrageCode" class="custom-control-label">Demarrage Code</label>
+                                        <span asp-validation-for="DemarrageCode" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="Demarrageadistance">Demarrage a distance / Non</label>
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" data-val="true" data-val-required="The IsChecked field is required." id="Demarrageadistance" name="Demarrageadistance" value="true">
+                                        <input name="Demarrageadistance" type="hidden" value="false">
+                                        <label asp-for="Demarrageadistance" class="custom-control-label">Saloncuir</label>
+                                        <span asp-validation-for="Demarrageadistance" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="Abs">Abs / Non</label>
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" data-val="true" data-val-required="The IsChecked field is required." id="Abs" name="Abs" value="true">
+                                        <input name="Abs" type="hidden" value="false">
+                                        <label asp-for="Abs" class="custom-control-label">Abs</label>
+                                        <span asp-validation-for="Abs" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="Radio">Radio / Non</label>
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" data-val="true" data-val-required="The IsChecked field is required." id="Radio" name="Radio" value="true">
+                                        <input name="Radio" type="hidden" value="false">
+                                        <label asp-for="Radio" class="custom-control-label">Radio</label>
+                                        <span asp-validation-for="Radio" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="RadioCD">RadioCD / Non</label>
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" data-val="true" data-val-required="The IsChecked field is required." id="RadioCD" name="RadioCD" value="true">
+                                        <input name="RadioCD" type="hidden" value="false">
+                                        <label asp-for="RadioCD" class="custom-control-label">RadioCD</label>
+                                        <span asp-validation-for="RadioCD" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="JanteAllu">JanteAllu / Non</label>
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" data-val="true" data-val-required="The IsChecked field is required." id="JanteAllu" name="JanteAllu" value="true">
+                                        <input name="JanteAllu" type="hidden" value="false">
+                                        <label asp-for="JanteAllu" class="custom-control-label">JanteAllu</label>
+                                        <span asp-validation-for="JanteAllu" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="Airbag">Airbag / Non</label>
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" data-val="true" data-val-required="The IsChecked field is required." id="Airbag" name="Airbag" value="true">
+                                        <input name="Airbag" type="hidden" value="false">
+                                        <label asp-for="Airbag" class="custom-control-label">Airbag</label>
+                                        <span asp-validation-for="Airbag" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="Commandeadistance">Commande à distance / Non</label>
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" data-val="true" data-val-required="The IsChecked field is required." id="Commandeadistance" name="Commandeadistance" value="true">
+                                        <input name="Commandeadistance" type="hidden" value="false">
+                                        <label asp-for="Commandeadistance" class="custom-control-label">Commande à distance</label>
+                                        <span asp-validation-for="JanteAllu" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="DirectionAssiste">Direction assiste / Non</label>
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" data-val="true" data-val-required="The IsChecked field is required." id="DirectionAssiste" name="DirectionAssiste" value="true">
+                                        <input name="DirectionAssiste" type="hidden" value="false">
+                                        <label asp-for="DirectionAssiste" class="custom-control-label">Direction assiste</label>
+                                        <span asp-validation-for="DirectionAssiste" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="SiegePilote">Siege Pilote / Non</label>
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" data-val="true" data-val-required="The IsChecked field is required." id="SiegePilote" name="SiegePilote" value="true">
+                                        <input name="SiegePilote" type="hidden" value="false">
+                                        <label asp-for="SiegePilote" class="custom-control-label">Siege Pilote</label>
+                                        <span asp-validation-for="SiegePilote" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+                <div class="card card-success">
+                    <div class="card-body">
+                        <button type="submit" class="btn btn-info btn-flat">Ajouter</button>
+                        <a asp-action="Index" class="btn btn-danger float-right btn-flat">Annuler</a>
+                    </div>
+                    <!-- /.card-footer -->
+                </div>
+            </div>
+            <!--/.col (right) -->
+        </div>
+        <!-- /.row -->
+    </form>
+

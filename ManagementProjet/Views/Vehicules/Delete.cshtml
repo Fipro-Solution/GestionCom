@@ -1,0 +1,59 @@
+﻿@model ManagementProjet.Models.Vehicule
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<br />
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-primary card-outline">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        <i class="fas fa-edit"></i>
+                        Supprimer Personnel
+                    </h3>
+                </div>
+                <div class="card-body pad table-responsive">
+                    <p>
+                        <b>
+                            Êtes-vous sûr de vouloir supprimer ceci?
+                        </b>
+                    </p>
+                    <p>
+                        <b>@Html.DisplayNameFor(model => model.Code)</b> &nbsp; @Html.DisplayFor(model => model.Code)
+                    </p>
+                    <p>
+                        <b>@Html.DisplayNameFor(model => model.Libelle)</b> &nbsp; @Html.DisplayFor(model => model.Libelle)
+                    </p>
+                    <p>
+                        <b>@Html.DisplayNameFor(model => model.Actif)</b> &nbsp; @if (Model.Actif == true) {<small class="badge badge-success"><i class="far fa-check-circle"></i> Approved </small>}else{<small class="badge badge-success"><i class="far fa-clock"></i> Pending </small> }
+                    </p>
+                    <p>
+                        <b>@Html.DisplayNameFor(model => model.immatricule)</b> &nbsp; @Html.DisplayFor(model => model.immatricule)
+                    </p>
+                    <p>
+                        <b>@Html.DisplayNameFor(model => model.Etat)</b> &nbsp; @Html.DisplayFor(model => model.Etat)
+                    </p>
+                    <p>
+                        <b>@Html.DisplayNameFor(model => model.Modele)</b> &nbsp; @Html.DisplayFor(model => model.Modele)
+                    </p>
+                    <p>
+                        <b>@Html.DisplayNameFor(model => model.Couleur)</b> &nbsp; @Html.DisplayFor(model => model.Couleur)
+                    </p>
+
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="Id" />
+                        <input type="submit" value="Supprimer" class="btn btn-danger btn-flat" /> |
+                        <a asp-action="Index">List Véhicules</a>
+                    </form>
+                </div>
+                <!-- /.card -->
+            </div>
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- ./row -->
+
+</div><!-- /.container-fluid -->

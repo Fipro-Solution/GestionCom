@@ -206,6 +206,124 @@ namespace ManagementProjet.Data.Migrations
                     b.ToTable("Personnel");
                 });
 
+            modelBuilder.Entity("ManagementProjet.Models.Vehicule", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("ARD");
+
+                    b.Property<string>("ARG");
+
+                    b.Property<string>("AVD");
+
+                    b.Property<string>("AVG");
+
+                    b.Property<bool?>("Abs");
+
+                    b.Property<string>("Accessoire");
+
+                    b.Property<bool?>("Actif");
+
+                    b.Property<bool?>("Airbag");
+
+                    b.Property<bool?>("Alarme");
+
+                    b.Property<int?>("Amortis");
+
+                    b.Property<string>("Assise");
+
+                    b.Property<string>("Categorie")
+                        .IsRequired();
+
+                    b.Property<int>("Code");
+
+                    b.Property<bool?>("Commandeadistance");
+
+                    b.Property<string>("Couleur");
+
+                    b.Property<int?>("Cylindree");
+
+                    b.Property<DateTime?>("DateAcqui");
+
+                    b.Property<DateTime?>("DateFinG");
+
+                    b.Property<DateTime?>("DatePMC");
+
+                    b.Property<string>("Debout");
+
+                    b.Property<bool?>("DemarrageCode");
+
+                    b.Property<bool?>("Demarrageadistance");
+
+                    b.Property<bool?>("DirectionAssiste");
+
+                    b.Property<int>("Energie");
+
+                    b.Property<int>("Etat");
+
+                    b.Property<bool?>("FermetureCentrale");
+
+                    b.Property<string>("Fourn");
+
+                    b.Property<int?>("IndKilimetre");
+
+                    b.Property<bool?>("JanteAllu");
+
+                    b.Property<string>("Libelle")
+                        .IsRequired();
+
+                    b.Property<decimal?>("MantAcqui");
+
+                    b.Property<string>("Marque")
+                        .IsRequired();
+
+                    b.Property<string>("Modele")
+                        .IsRequired();
+
+                    b.Property<string>("NMoteur");
+
+                    b.Property<string>("Nchassis");
+
+                    b.Property<string>("Observation")
+                        .HasMaxLength(1000);
+
+                    b.Property<float?>("PoidsUtile");
+
+                    b.Property<float?>("PoidsVide");
+
+                    b.Property<decimal?>("Pratique");
+
+                    b.Property<bool?>("Radio");
+
+                    b.Property<bool?>("RadioCD");
+
+                    b.Property<decimal?>("Restant");
+
+                    b.Property<bool?>("Saloncuir");
+
+                    b.Property<string>("Secour");
+
+                    b.Property<bool?>("SiegePilote");
+
+                    b.Property<decimal?>("Taxe");
+
+                    b.Property<bool?>("Vendue");
+
+                    b.Property<bool?>("climatise");
+
+                    b.Property<string>("immatricule")
+                        .IsRequired();
+
+                    b.Property<string>("puissance");
+
+                    b.Property<decimal?>("theorique");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Vehicule");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")

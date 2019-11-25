@@ -1,0 +1,324 @@
+﻿@model ManagementProjet.Models.Vehicule
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Vehicule</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Code)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Code)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Libelle)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Libelle)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Actif)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Actif)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.immatricule)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.immatricule)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Etat)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Etat)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Fourn)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Fourn)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Modele)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Modele)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Marque)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Marque)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Categorie)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Categorie)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Couleur)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Couleur)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DatePMC)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DatePMC)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MantAcqui)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MantAcqui)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateAcqui)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateAcqui)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateFinG)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateFinG)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nchassis)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nchassis)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NMoteur)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NMoteur)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IndKilimetre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IndKilimetre)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cylindree)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cylindree)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PoidsVide)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PoidsVide)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PoidsUtile)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PoidsUtile)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Energie)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Energie)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.puissance)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.puissance)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Debout)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Debout)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Assise)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Assise)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.theorique)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.theorique)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pratique)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pratique)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AVG)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AVG)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AVD)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AVD)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ARG)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ARG)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ARD)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ARD)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Secour)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Secour)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Restant)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Restant)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Amortis)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Amortis)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Accessoire)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Accessoire)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Taxe)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Taxe)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.climatise)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.climatise)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FermetureCentrale)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FermetureCentrale)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Alarme)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Alarme)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Saloncuir)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Saloncuir)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DemarrageCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DemarrageCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Demarrageadistance)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Demarrageadistance)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Abs)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Abs)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Radio)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Radio)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RadioCD)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RadioCD)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.JanteAllu)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.JanteAllu)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Airbag)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Airbag)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Commandeadistance)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Commandeadistance)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DirectionAssiste)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DirectionAssiste)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SiegePilote)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SiegePilote)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Observation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Observation)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Vendue)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vendue)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
