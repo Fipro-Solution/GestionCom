@@ -22,6 +22,7 @@ namespace ManagementProjet.Controllers
         // GET: Vehicules
         public async Task<IActionResult> Index()
         {
+            ViewBag.TotalVehicule = _context.Vehicule.Count();
             return View(await _context.Vehicule.ToListAsync());
         }
 

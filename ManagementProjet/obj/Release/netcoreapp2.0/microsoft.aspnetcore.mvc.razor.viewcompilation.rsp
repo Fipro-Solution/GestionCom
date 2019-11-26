@@ -51,5 +51,10 @@ E:\projects\GestionCom\ManagementProjet
 --file=E:\projects\GestionCom\ManagementProjet\Views\Shared\_Layout.cshtml
 --file=E:\projects\GestionCom\ManagementProjet\Views\Shared\_LoginPartial.cshtml
 --file=E:\projects\GestionCom\ManagementProjet\Views\Shared\_ValidationScriptsPartial.cshtml
+--file=E:\projects\GestionCom\ManagementProjet\Views\Vehicules\Create.cshtml
+--file=E:\projects\GestionCom\ManagementProjet\Views\Vehicules\Delete.cshtml
+--file=E:\projects\GestionCom\ManagementProjet\Views\Vehicules\Details.cshtml
+--file=E:\projects\GestionCom\ManagementProjet\Views\Vehicules\Edit.cshtml
+--file=E:\projects\GestionCom\ManagementProjet\Views\Vehicules\Index.cshtml
 --file=E:\projects\GestionCom\ManagementProjet\Views\_ViewImports.cshtml
 --file=E:\projects\GestionCom\ManagementProjet\Views\_ViewStart.cshtml
