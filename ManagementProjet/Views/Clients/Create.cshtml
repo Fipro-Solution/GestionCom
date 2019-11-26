@@ -1,0 +1,253 @@
+﻿@model ManagementProjet.Models.Client
+
+@{
+    ViewData["Title"] = "Create";
+    <!-- Select2 -->
+    <link href="~/AdminTemplate/plugins/select2/css/select2.min.css" rel="stylesheet" />
+    <link href="~/AdminTemplate/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css" rel="stylesheet" />
+}
+<br />
+
+<div class="container-fluid">
+    <div class="row mb-2">
+        <div class="col-sm-6">
+            <h1>Creation Clients</h1>
+        </div>
+        <div class="col-sm-6">
+            <ol class="breadcrumbv2 breadcrumb float-sm-right ">
+                <li class="breadcrumb-item">
+                    <a href="@Url.Action("Index","Clients")">
+                        <i class="fas fa-table"></i> List Clients
+                    </a>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <form asp-action="Create">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="row">
+
+            <!-- left column -->
+            <div class="col-md-6">
+                <!-- general form elements -->
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">information Personnel</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="Code" class="control-label"></label>
+                                    <input asp-for="Code" class="form-control" placeholder="Enter Code" />
+                                    <span asp-validation-for="Code" class="text-danger"></span>
+                                </div>
+                                <!-- /. Form-group -->
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="Libelle" class="control-label"></label>
+                                    <input asp-for="Libelle" class="form-control" placeholder="Enter Libelle" />
+                                    <span asp-validation-for="Libelle" class="text-danger"></span>
+                                </div>
+                                <!-- /. Form-group -->
+
+                            </div>
+                        </div>
+                        <!-- /.row div -->
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="TypeClt" class="control-label"></label>
+                                    <select asp-for="TypeClt" asp-items="Html.GetEnumSelectList<TypeClt>()" class="form-control select2bs4" style="width: 100%;"></select>
+                                    <span asp-validation-for="TypeClt" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <!-- /. Form-group -->
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="MatFisc" class="control-label"></label>
+                                    <input asp-for="MatFisc" class="form-control" placeholder="Enter MatFisc" />
+                                    <span asp-validation-for="MatFisc" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <!-- /. Form-group -->
+
+                        </div>
+                        <!-- /.row div -->
+
+                        <div class="form-group">
+                            <label asp-for="Address" class="control-label"></label>
+                            <textarea asp-for="Address" rows="4" class="form-control" placeholder="Enter Address"></textarea>
+                            <span asp-validation-for="Address" class="text-danger"></span>
+                        </div>
+                        <!-- /. Form-group -->
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="Tel" class="control-label"></label>
+                                    <input asp-for="Tel" class="form-control" placeholder="Enter Tel" />
+                                    <span asp-validation-for="Tel" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="Fax" class="control-label"></label>
+                                    <input asp-for="Fax" class="form-control" placeholder="Enter Fax" />
+                                    <span asp-validation-for="Fax" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.row div -->
+
+                        <div class="form-group">
+                            <label asp-for="Siteweb" class="control-label"></label>
+                            <input asp-for="Siteweb" class="form-control" placeholder="Enter WebSite" />
+                            <span asp-validation-for="Siteweb" class="text-danger"></span>
+                        </div>
+                        <!-- /. Form-group -->
+
+                    </div>
+                    <!-- /.card-body -->
+
+                </div>
+                <!-- /.card -->
+
+            </div>
+            <!--/.col (left) -->
+            <!-- right column -->
+            <div class="col-md-6">
+                <!-- general form elements disabled -->
+                <div class="card card-warning">
+                    <div class="card-header">
+                        <h3 class="card-title">Contrat</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="NomContact" class="control-label"></label>
+                                    <input asp-for="NomContact" class="form-control" placeholder="Enter Nom Contact" />
+                                    <span asp-validation-for="NomContact" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <!-- /. Form-group -->
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="FoncContact" class="control-label"></label>
+                                    <input asp-for="FoncContact" class="form-control" placeholder="Enter Fonc Contact" />
+                                    <span asp-validation-for="FoncContact" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <!-- /. Form-group -->
+
+                        </div>
+                        <!-- /.row div -->
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="TelContact" class="control-label"></label>
+                                    <input asp-for="TelContact" class="form-control" placeholder="Enter Tel Contact" />
+                                    <span asp-validation-for="TelContact" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <!-- /. Form-group -->
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="FaxContact" class="control-label"></label>
+                                    <input asp-for="FaxContact" class="form-control" placeholder="Enter fax Contact" />
+                                    <span asp-validation-for="FaxContact" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <!-- /. Form-group -->
+
+                        </div>
+                        <!-- /.row div -->
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="GsmContact" class="control-label"></label>
+                                    <input asp-for="GsmContact" class="form-control" placeholder="Enter Gsm Contact" />
+                                    <span asp-validation-for="GsmContact" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <!-- /. Form-group -->
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="EmailCon" class="control-label"></label>
+                                    <input asp-for="EmailCon" class="form-control" placeholder="Enter Email Contact" />
+                                    <span asp-validation-for="EmailCon" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <!-- /. Form-group -->
+
+                        </div>
+                        <!-- /.row div -->
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    
+                                    <label asp-for="Douleurs">Douleurs / Non</label>
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" data-val="true" data-val-required="The IsChecked field is required." id="Douleurs" name="Douleurs" value="true">
+                                        <input name="Douleurs" type="hidden" value="false">
+                                        <label asp-for="Douleurs" class="custom-control-label">Douleurs</label>
+                                        <span asp-validation-for="Douleurs" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- /. Form-group -->
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="TauxTva" class="control-label"></label>
+                                    <select asp-for="TauxTva" asp-items="Html.GetEnumSelectList<TauxTva>()" class="form-control select2bs4" style="width: 100%;"></select>
+                                    <span asp-validation-for="TauxTva" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <!-- /. Form-group -->
+
+                        </div>
+                        <!-- /.row div -->
+                        <div class="form-group">
+                            <label asp-for="Remarque" class="control-label"></label>
+                            <input asp-for="Remarque" class="form-control" placeholder="Enter Remarque" />
+                            <span asp-validation-for="Remarque" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+                    <div class="card-footer">
+                        <div class="form-group form-groupMod">
+                            <input type="submit" value="Create" class="btn btn-primary" />
+                        </div>
+                    </div>
+                    <!-- /.card-footer -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!--/.col (right) -->
+        </div>
+        <!-- /.row -->
+    </form>
+</div>
+
+@section Scripts{
+    <!-- Select2 -->
+    <script src="~/AdminTemplate/plugins/select2/js/select2.full.min.js"></script>
+    <script>
+        $(function () {
+
+            //Initialize Select2 Elements
+            $('.select2bs4').select2({
+                theme: 'bootstrap4'
+            })
+        })
+    </script>
+}

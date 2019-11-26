@@ -145,6 +145,62 @@ namespace ManagementProjet.Data.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("ManagementProjet.Models.Client", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Address")
+                        .IsRequired();
+
+                    b.Property<string>("Code")
+                        .IsRequired();
+
+                    b.Property<bool>("Douleurs");
+
+                    b.Property<string>("EmailCon")
+                        .IsRequired();
+
+                    b.Property<string>("Fax")
+                        .IsRequired();
+
+                    b.Property<string>("FaxContact")
+                        .IsRequired();
+
+                    b.Property<string>("FoncContact")
+                        .IsRequired();
+
+                    b.Property<string>("GsmContact")
+                        .IsRequired();
+
+                    b.Property<string>("Libelle")
+                        .IsRequired();
+
+                    b.Property<string>("MatFisc")
+                        .IsRequired();
+
+                    b.Property<string>("NomContact")
+                        .IsRequired();
+
+                    b.Property<string>("Remarque");
+
+                    b.Property<string>("Siteweb");
+
+                    b.Property<int>("TauxTva");
+
+                    b.Property<string>("Tel")
+                        .IsRequired();
+
+                    b.Property<string>("TelContact")
+                        .IsRequired();
+
+                    b.Property<int>("TypeClt");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Client");
+                });
+
             modelBuilder.Entity("ManagementProjet.Models.Personnel", b =>
                 {
                     b.Property<int>("Id")

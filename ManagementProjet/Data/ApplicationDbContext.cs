@@ -28,5 +28,7 @@ namespace ManagementProjet.Data
         public DbSet<ManagementProjet.Models.Agence> Agence { get; set; }
 
         public DbSet<ManagementProjet.Models.Vehicule> Vehicule { get; set; }
+
+        public DbSet<ManagementProjet.Models.Client> Client { get; set; }
     }
 }

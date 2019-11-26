@@ -1,0 +1,286 @@
+﻿@model ManagementProjet.Models.Client
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<br />
+<div class="container-fluid">
+    <div class="row mb-2">
+        <div class="col-sm-6">
+            <h1>Details Clients</h1>
+        </div>
+        <div class="col-sm-6">
+            <ol class="breadcrumbv2 breadcrumb float-sm-right ">
+                <li class="breadcrumb-item">
+                    <a href="@Url.Action("Index","Clients")">
+                        <i class="fas fa-table"></i> List Clients
+                    </a>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+
+            <!-- Profile Image -->
+            <div class="card card-primary card-outline">
+                <div class="card-body box-profile">
+                    <div class="text-center">
+                        <img class="profile-user-img img-fluid img-circle" src="~/AdminTemplate/dist/img/user-icon-clipart-9.png" alt="User profile picture">
+                    </div>
+
+                    <h3 class="profile-username text-center">
+                        @Html.DisplayFor(model => model.NomContact) &nbsp; @Html.DisplayFor(model => model.FoncContact)
+                    </h3>
+
+                    <p class="text-muted text-center">@Html.DisplayFor(model => model.EmailCon)</p>
+
+                    <ul class="list-group list-group-unbordered mb-3">
+                        <li class="list-group-item">
+                            <b>Mat Fisc</b> <a class="float-right">@Html.DisplayFor(model => model.MatFisc)</a>
+                        </li>
+                        <li class="list-group-item">
+                            <b>Gsm Contact</b> <a class="float-right">@Html.DisplayFor(model => model.GsmContact)</a>
+                        </li>
+                        <li class="list-group-item">
+                            <b>Type Clt</b> <a class="float-right">@Html.DisplayFor(model => model.TypeClt)</a>
+                        </li>
+                    </ul>
+
+                    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary btn-block"><b>Modifier</b></a>
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+        </div>
+        <!-- /.col -->
+        <div class="col-md-9">
+            <div class="card">
+                <div class="card-header p-2">
+                    <ul class="nav nav-pills">
+                        <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab">information Générale</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#timeline" data-toggle="tab">Personnel</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">Autre</a></li>
+                    </ul>
+                </div><!-- /.card-header -->
+                <div class="card-body">
+                    <div class="tab-content">
+                        <div class="active tab-pane" id="activity">
+                            <!-- Post -->
+                            <div class="post">
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <p>
+                                                <b>Code : </b>
+                                            </p>
+                                        </div>
+                                        <div class="col-10">
+                                            <p>
+                                                @Html.DisplayFor(model => model.Code)
+                                            </p>
+                                        </div>
+                                        <div class="col-2">
+                                            <p>
+                                                <b>Libelle : </b>
+                                            </p>
+                                        </div>
+                                        <div class="col-10">
+                                            <p>
+                                                @Html.DisplayFor(model => model.Libelle)
+                                            </p>
+                                        </div>
+                                        <div class="col-2">
+                                            <p>
+                                                <b>Type Clt : </b>
+                                            </p>
+                                        </div>
+                                        <div class="col-10">
+                                            <p>
+                                                @Html.DisplayFor(model => model.TypeClt)
+                                            </p>
+                                        </div>
+                                        <div class="col-2">
+                                            <p>
+                                                <b>Mat Fisc : </b>
+                                            </p>
+                                        </div>
+                                        <div class="col-10">
+                                            <p>
+                                                @Html.DisplayFor(model => model.MatFisc)
+                                            </p>
+                                        </div>
+                                        <div class="col-2">
+                                            <p>
+                                                <b>Addresse : </b>
+                                            </p>
+                                        </div>
+                                        <div class="col-10">
+                                            <p>
+                                                @Html.DisplayFor(model => model.Address)
+                                            </p>
+                                        </div>
+                                        <div class="col-2">
+                                            <p>
+                                                <b>Tel : </b>
+                                            </p>
+                                        </div>
+                                        <div class="col-10">
+                                            <p>
+                                                @Html.DisplayFor(model => model.Tel)
+                                            </p>
+                                        </div>
+                                        <div class="col-2">
+                                            <p>
+                                                <b>Fax : </b>
+                                            </p>
+                                        </div>
+                                        <div class="col-10">
+                                            <p>
+                                                @Html.DisplayFor(model => model.Fax)
+                                            </p>
+                                        </div>
+                                        <div class="col-2">
+                                            <p>
+                                                <b>Site web : </b>
+                                            </p>
+                                        </div>
+                                        <div class="col-10">
+                                            <p>
+                                                @Html.DisplayFor(model => model.Siteweb)
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.post -->
+                        </div>
+                        <!-- /.tab-pane -->
+                        <div class="tab-pane" id="timeline">
+                            <!-- Post -->
+                            <div class="post">
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <p>
+                                                <b>Nom Complet</b>
+                                            </p>
+                                        </div>
+                                        <div class="col-10">
+                                            <p>
+                                                @Html.DisplayFor(model => model.NomContact) @Html.DisplayFor(model => model.FoncContact)
+                                            </p>
+                                        </div>
+                                        <div class="col-2">
+                                            <p>
+                                                <b>Tel Contact : </b>
+                                            </p>
+                                        </div>
+                                        <div class="col-10">
+                                            <p>
+                                                @Html.DisplayFor(model => model.TelContact)
+                                            </p>
+                                        </div>
+                                        <div class="col-2">
+                                            <p>
+                                                <b>Fax Contact : </b>
+                                            </p>
+                                        </div>
+                                        <div class="col-10">
+                                            <p>
+                                                @Html.DisplayFor(model => model.FaxContact)
+                                            </p>
+                                        </div>
+                                        <div class="col-2">
+                                            <p>
+                                                <b>Gsm Contact : </b>
+                                            </p>
+                                        </div>
+                                        <div class="col-10">
+                                            <p>
+                                                @Html.DisplayFor(model => model.GsmContact)
+                                            </p>
+                                        </div>
+                                        <div class="col-2">
+                                            <p>
+                                                <b>Addresse : </b>
+                                            </p>
+                                        </div>
+                                        <div class="col-10">
+                                            <p>
+                                                @Html.DisplayFor(model => model.Address)
+                                            </p>
+                                        </div>
+                                        <div class="col-2">
+                                            <p>
+                                                <b>Email Con : </b>
+                                            </p>
+                                        </div>
+                                        <div class="col-10">
+                                            <p>
+                                                @Html.DisplayFor(model => model.EmailCon)
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.post -->
+                        </div>
+                        <!-- /.tab-pane -->
+
+                        <div class="tab-pane" id="settings">
+                            <!-- Post -->
+                            <div class="post">
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <p>
+                                                <b>Douleurs : </b>
+                                            </p>
+                                        </div>
+                                        <div class="col-10">
+                                            <p>
+                                                @Html.DisplayFor(model => model.Douleurs)
+                                            </p>
+                                        </div>
+                                        <div class="col-2">
+                                            <p>
+                                                <b>Taux Tva</b>
+                                            </p>
+                                        </div>
+                                        <div class="col-10">
+                                            <p>
+                                                @Html.DisplayFor(model => model.TauxTva)
+                                            </p>
+                                        </div>
+                                        <div class="col-2">
+                                            <p>
+                                                <b>Remarque : </b>
+                                            </p>
+                                        </div>
+                                        <div class="col-10">
+                                            <p>
+                                                @Html.DisplayFor(model => model.Remarque)
+                                            </p>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.post -->
+                        </div>
+                        <!-- /.tab-pane -->
+                    </div>
+                    <!-- /.tab-content -->
+                </div><!-- /.card-body -->
+            </div>
+            <!-- /.nav-tabs-custom -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</div><!-- /.container-fluid -->

@@ -1,0 +1,61 @@
+﻿@model ManagementProjet.Models.Client
+
+@{
+    ViewData["Title"] = "Delete";
+}
+<br />
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-primary card-outline">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        <i class="fas fa-edit"></i>
+                        Supprimer Personnel
+                    </h3>
+                </div>
+                <div class="card-body pad table-responsive">
+                    <p>
+                        <b>
+                            Êtes-vous sûr de vouloir supprimer ceci?
+                        </b>
+                    </p>
+                    <p>
+                        <b>@Html.DisplayNameFor(model => model.Code)</b> &nbsp; @Html.DisplayFor(model => model.Code)
+                    </p>
+                    <p>
+                        <b>@Html.DisplayNameFor(model => model.MatFisc)</b> &nbsp; @Html.DisplayFor(model => model.MatFisc)
+                    </p>
+                    <p>
+                        <b>@Html.DisplayNameFor(model => model.Douleurs)</b> &nbsp; @if (Model.Douleurs == true)
+                        {<small class="badge badge-success"><i class="far fa-check-circle"></i> Douleurs </small>}
+                        else
+                        {<small class="badge badge-danger"><i class="far fa-clock"></i> Non Douleurs </small>}
+                    </p>
+                    <p>
+                        <b>@Html.DisplayNameFor(model => model.NomContact)</b> &nbsp; @Html.DisplayFor(model => model.NomContact)
+                    </p>
+                    <p>
+                        <b>@Html.DisplayNameFor(model => model.GsmContact)</b> &nbsp; @Html.DisplayFor(model => model.GsmContact)
+                    </p>
+                    <p>
+                        <b>@Html.DisplayNameFor(model => model.EmailCon)</b> &nbsp; @Html.DisplayFor(model => model.EmailCon)
+                    </p>
+                    <p>
+                        <b>@Html.DisplayNameFor(model => model.TauxTva)</b> &nbsp; @Html.DisplayFor(model => model.TauxTva)
+                    </p>
+
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="Id" />
+                        <input type="submit" value="Supprimer" class="btn btn-danger btn-flat" /> |
+                        <a asp-action="Index">List Véhicules</a>
+                    </form>
+                </div>
+                <!-- /.card -->
+            </div>
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- ./row -->
+
+</div><!-- /.container-fluid -->
