@@ -1,0 +1,138 @@
+﻿@model ManagementProjet.Models.OrdreMission
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>OrdreMission</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Code)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Code)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateMission)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateMission)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.matricule)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.matricule)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Conducteur)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Conducteur)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NumPermis)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NumPermis)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CIN)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CIN)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Destinations)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Destinations)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CompteurInit)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CompteurInit)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CompteurFinal)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CompteurFinal)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateDepart)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateDepart)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateRetour)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateRetour)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LibelleMission1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LibelleMission1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LibelleMission2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LibelleMission2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LibelleMission3)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LibelleMission3)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DetailsMission)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DetailsMission)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FraisMission1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FraisMission1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FraisMission2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FraisMission2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FraisMission3)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FraisMission3)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Total)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Total)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Vehicule)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vehicule.Categorie)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

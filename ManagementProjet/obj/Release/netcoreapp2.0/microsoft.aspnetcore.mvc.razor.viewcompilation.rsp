@@ -25,6 +25,11 @@ E:\projects\GestionCom\ManagementProjet
 --file=E:\projects\GestionCom\ManagementProjet\Views\Agences\Details.cshtml
 --file=E:\projects\GestionCom\ManagementProjet\Views\Agences\Edit.cshtml
 --file=E:\projects\GestionCom\ManagementProjet\Views\Agences\Index.cshtml
+--file=E:\projects\GestionCom\ManagementProjet\Views\Clients\Create.cshtml
+--file=E:\projects\GestionCom\ManagementProjet\Views\Clients\Delete.cshtml
+--file=E:\projects\GestionCom\ManagementProjet\Views\Clients\Details.cshtml
+--file=E:\projects\GestionCom\ManagementProjet\Views\Clients\Edit.cshtml
+--file=E:\projects\GestionCom\ManagementProjet\Views\Clients\Index.cshtml
 --file=E:\projects\GestionCom\ManagementProjet\Views\Home\About.cshtml
 --file=E:\projects\GestionCom\ManagementProjet\Views\Home\Contact.cshtml
 --file=E:\projects\GestionCom\ManagementProjet\Views\Home\Index.cshtml

@@ -30,5 +30,7 @@ namespace ManagementProjet.Data
         public DbSet<ManagementProjet.Models.Vehicule> Vehicule { get; set; }
 
         public DbSet<ManagementProjet.Models.Client> Client { get; set; }
+
+        public DbSet<ManagementProjet.Models.OrdreMission> OrdreMission { get; set; }
     }
 }

@@ -1,0 +1,59 @@
+﻿@model ManagementProjet.Models.OrdreMission
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<br />
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-primary card-outline">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        <i class="fas fa-edit"></i>
+                        Supprimer Personnel
+                    </h3>
+                </div>
+                <div class="card-body pad table-responsive">
+                    <p>
+                        <b>
+                            Êtes-vous sûr de vouloir supprimer ceci?
+                        </b>
+                    </p>
+                    <p>
+                        <b>@Html.DisplayNameFor(model => model.Code)</b> &nbsp; @Html.DisplayFor(model => model.Code)
+                    </p>
+                    <p>
+                        <b>@Html.DisplayNameFor(model => model.DateMission)</b> &nbsp; @Html.DisplayFor(model => model.DateMission)
+                    </p>
+                    <p>
+                        <b>@Html.DisplayNameFor(model => model.Vehicule)</b> &nbsp; @Html.DisplayFor(model => model.Vehicule.Libelle)
+                    </p>
+                    <p>
+                        <b>@Html.DisplayNameFor(model => model.matricule)</b> &nbsp; @Html.DisplayFor(model => model.matricule)
+                    </p>
+                    <p>
+                        <b>@Html.DisplayNameFor(model => model.Conducteur)</b> &nbsp; @Html.DisplayFor(model => model.Conducteur)
+                    </p>
+                    <p>
+                        <b>@Html.DisplayNameFor(model => model.Destinations)</b> &nbsp; @Html.DisplayFor(model => model.Destinations)
+                    </p>
+                    <p>
+                        <b>@Html.DisplayNameFor(model => model.Total)</b> &nbsp; @Html.DisplayFor(model => model.Total)
+                    </p>
+
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="Id" />
+                        <input type="submit" value="Supprimer" class="btn btn-danger btn-flat" /> |
+                        <a asp-action="Index">List Véhicules</a>
+                    </form>
+                </div>
+                <!-- /.card -->
+            </div>
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- ./row -->
+
+</div><!-- /.container-fluid -->

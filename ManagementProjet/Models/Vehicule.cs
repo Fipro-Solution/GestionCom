@@ -14,10 +14,10 @@ namespace ManagementProjet.Models
         public int Id { get; set; }
 
         [Required]
-        public int Code { get; set; }
+        public string Libelle { get; set; }
 
         [Required]
-        public string Libelle { get; set; }
+        public int Code { get; set; }
 
         public bool? Actif { get; set; }
 
@@ -151,5 +151,7 @@ namespace ManagementProjet.Models
         public string Observation { get; set; }
 
         public bool? Vendue { get; set; }
+
+        public virtual ICollection<OrdreMission> OrdreMissions { get; set; }
     }
 }

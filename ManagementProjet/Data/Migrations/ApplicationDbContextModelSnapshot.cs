@@ -201,6 +201,68 @@ namespace ManagementProjet.Data.Migrations
                     b.ToTable("Client");
                 });
 
+            modelBuilder.Entity("ManagementProjet.Models.OrdreMission", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("CIN");
+
+                    b.Property<string>("Code")
+                        .IsRequired();
+
+                    b.Property<int>("CompteurFinal");
+
+                    b.Property<int>("CompteurInit");
+
+                    b.Property<string>("Conducteur")
+                        .IsRequired()
+                        .HasMaxLength(20);
+
+                    b.Property<DateTime>("DateDepart");
+
+                    b.Property<DateTime>("DateMission");
+
+                    b.Property<DateTime>("DateRetour");
+
+                    b.Property<string>("Destinations")
+                        .IsRequired()
+                        .HasMaxLength(20);
+
+                    b.Property<string>("DetailsMission")
+                        .IsRequired()
+                        .HasMaxLength(1000);
+
+                    b.Property<float?>("FraisMission1");
+
+                    b.Property<float?>("FraisMission2");
+
+                    b.Property<float?>("FraisMission3");
+
+                    b.Property<string>("LibelleMission1")
+                        .IsRequired();
+
+                    b.Property<string>("LibelleMission2");
+
+                    b.Property<string>("LibelleMission3");
+
+                    b.Property<string>("NumPermis")
+                        .IsRequired()
+                        .HasMaxLength(20);
+
+                    b.Property<float?>("Total");
+
+                    b.Property<int>("VehiculeId");
+
+                    b.Property<string>("matricule");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("VehiculeId");
+
+                    b.ToTable("OrdreMission");
+                });
+
             modelBuilder.Entity("ManagementProjet.Models.Personnel", b =>
                 {
                     b.Property<int>("Id")
@@ -486,6 +548,14 @@ namespace ManagementProjet.Data.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("ManagementProjet.Models.OrdreMission", b =>
+                {
+                    b.HasOne("ManagementProjet.Models.Vehicule", "Vehicule")
+                        .WithMany("OrdreMissions")
+                        .HasForeignKey("VehiculeId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
