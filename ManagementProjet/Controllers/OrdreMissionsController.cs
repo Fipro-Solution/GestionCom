@@ -45,6 +45,25 @@ namespace ManagementProjet.Controllers
             return View(ordreMission);
         }
 
+        // GET: OrdreMissions/Details/5
+        public async Task<IActionResult> DetailsPrint(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var ordreMission = await _context.OrdreMission
+                .Include(o => o.Vehicule)
+                .SingleOrDefaultAsync(m => m.Id == id);
+            if (ordreMission == null)
+            {
+                return NotFound();
+            }
+
+            return View(ordreMission);
+        }
+
         // GET: OrdreMissions/Create
         public IActionResult Create()
         {
@@ -164,6 +183,14 @@ namespace ManagementProjet.Controllers
         private bool OrdreMissionExists(int id)
         {
             return _context.OrdreMission.Any(e => e.Id == id);
+        }
+        public IActionResult GetLMatById(int matId)
+        {
+
+            var data = from c in _context.Vehicule
+                       where c.Id == matId
+                       select c;
+            return View(data);
         }
     }
 }

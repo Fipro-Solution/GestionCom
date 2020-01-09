@@ -16,9 +16,9 @@ E:\projects\GestionCom\ManagementProjet\bin\Debug\netcoreapp2.0\ManagementProjet
 E:\projects\GestionCom\ManagementProjet\bin\Debug\netcoreapp2.0\ManagementProjet.dll
 E:\projects\GestionCom\ManagementProjet\bin\Debug\netcoreapp2.0\ManagementProjet.pdb
 E:\projects\GestionCom\ManagementProjet\obj\Debug\netcoreapp2.0\ManagementProjet.csproj.CoreCompileInputs.cache
-E:\projects\GestionCom\ManagementProjet\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
 E:\projects\GestionCom\ManagementProjet\obj\Debug\netcoreapp2.0\ManagementProjet.AssemblyInfoInputs.cache
 E:\projects\GestionCom\ManagementProjet\obj\Debug\netcoreapp2.0\ManagementProjet.AssemblyInfo.cs
 E:\projects\GestionCom\ManagementProjet\obj\Debug\netcoreapp2.0\ManagementProjet.dll
 E:\projects\GestionCom\ManagementProjet\obj\Debug\netcoreapp2.0\ManagementProjet.pdb
+E:\projects\GestionCom\ManagementProjet\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
 E:\projects\GestionCom\ManagementProjet\obj\Debug\netcoreapp2.0\ManagementProjet.csprojAssemblyReference.cache

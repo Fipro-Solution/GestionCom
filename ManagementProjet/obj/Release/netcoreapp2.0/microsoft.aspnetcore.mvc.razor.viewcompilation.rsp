@@ -47,6 +47,12 @@ E:\projects\GestionCom\ManagementProjet
 --file=E:\projects\GestionCom\ManagementProjet\Views\Manage\_ManageNav.cshtml
 --file=E:\projects\GestionCom\ManagementProjet\Views\Manage\_StatusMessage.cshtml
 --file=E:\projects\GestionCom\ManagementProjet\Views\Manage\_ViewImports.cshtml
+--file=E:\projects\GestionCom\ManagementProjet\Views\OrdreMissions\Create.cshtml
+--file=E:\projects\GestionCom\ManagementProjet\Views\OrdreMissions\Delete.cshtml
+--file=E:\projects\GestionCom\ManagementProjet\Views\OrdreMissions\Details.cshtml
+--file=E:\projects\GestionCom\ManagementProjet\Views\OrdreMissions\DetailsPrint.cshtml
+--file=E:\projects\GestionCom\ManagementProjet\Views\OrdreMissions\Edit.cshtml
+--file=E:\projects\GestionCom\ManagementProjet\Views\OrdreMissions\Index.cshtml
 --file=E:\projects\GestionCom\ManagementProjet\Views\Personnels\Create.cshtml
 --file=E:\projects\GestionCom\ManagementProjet\Views\Personnels\Delete.cshtml
 --file=E:\projects\GestionCom\ManagementProjet\Views\Personnels\Details.cshtml

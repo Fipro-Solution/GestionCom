@@ -1,0 +1,208 @@
+﻿@model ManagementProjet.Models.OrdreMission
+
+@{
+    ViewData["Title"] = "Details Print";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>GestionCom | OrdreMission</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap 4 -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/AdminTemplate/plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/AdminTemplate/dist/css/adminlte.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <!-- Main content -->
+            <section class="invoice">
+                <br />
+                <br />
+                <!-- title row -->
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="page-header">
+                            <i class="fas fa-globe"></i> GestionCom, Inc.
+                            <small class="float-right">Date: <span id="date"></span></small>
+                        </h2>
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <br />
+                <!-- info row -->
+                <div class="row invoice-info">
+                    <div class="col-sm-4 invoice-col">
+                        De la part :
+                        <address>
+                            <strong>GestionCom, Inc.</strong><br>
+                            Rue hassan ibn numman<br>
+                            Dar chabanne el fehri, 8011<br>
+                            Phone: (+216) 72-300-300<br>
+                            Email: daouda003@gmail.com
+                        </address>
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-sm-4 invoice-col">
+                        À
+                        <address>
+                            <strong>@Html.DisplayFor(model => model.Conducteur)</strong><br>
+                            Permis : @Html.DisplayFor(model => model.NumPermis)<br>
+                            CIN : @Html.DisplayFor(model => model.CIN)
+                        </address>
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-sm-4 invoice-col">
+                        <b>Ordre de mission : #@Html.DisplayFor(model => model.Id)</b><br>
+                        <br>
+                        <b>Code :</b> @Html.DisplayFor(model => model.Code)<br>
+                        <b>Date Mission:</b> @Html.DisplayFor(model => model.DateMission)<br>
+
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+                <br />
+                <br />
+                <div class="row">
+                    <div class="col-12">
+                        <h4 class="page-header">
+                            <i class="fas fa-car"></i> Information Mission.
+                        </h4>
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- Table row -->
+                <div class="row">
+                    <div class="col-12 table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>@Html.DisplayNameFor(model => model.Vehicule.Libelle)</th>
+                                    <th>@Html.DisplayNameFor(model => model.matricule)</th>
+                                    <th>@Html.DisplayNameFor(model => model.CompteurInit)</th>
+                                    <th>@Html.DisplayNameFor(model => model.CompteurFinal)</th>
+                                    <th>@Html.DisplayNameFor(model => model.DateDepart)</th>
+                                    <th>@Html.DisplayNameFor(model => model.DateRetour)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>@Html.DisplayFor(model => model.Vehicule.Libelle)</td>
+                                    <td>@Html.DisplayFor(model => model.Vehicule.immatricule)</td>
+                                    <td>@Html.DisplayFor(model => model.CompteurInit)</td>
+                                    <td>@Html.DisplayFor(model => model.CompteurFinal)</td>
+                                    <td>@Html.DisplayNameFor(model => model.DateDepart)</td>
+                                    <td>@Html.DisplayNameFor(model => model.DateRetour)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+                <br />
+                <br />
+                <div class="row">
+                    <div class="col-12">
+                        <h4 class="page-header">
+                            <i class="fas fa-file-alt"></i> Details Mission.
+                        </h4>
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- Table row -->
+                <div class="row">
+                    <div class="col-12 table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>@Html.DisplayNameFor(model => model.Destinations)</th>
+                                    <th>@Html.DisplayNameFor(model => model.LibelleMission1)</th>
+                                    <th>@Html.DisplayNameFor(model => model.LibelleMission2)</th>
+                                    <th>@Html.DisplayNameFor(model => model.LibelleMission3)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>@Html.DisplayFor(model => model.Destinations)</td>
+                                    <td>@Html.DisplayFor(model => model.LibelleMission1)</td>
+                                    <td>
+                                        @Html.DisplayFor(model => model.LibelleMission2)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(model => model.LibelleMission3)
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <br />
+                <br />
+                <!-- /.row -->
+                <div class="row">
+                    <!-- accepted payments column -->
+                    <div class="col-6">
+                        <p class="lead">Description :</p>
+                        <p class="text-muted well well-sm shadow-none" style="margin-top: 10px;">
+                            @Html.DisplayFor(model => model.DetailsMission)
+                        </p>
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-6">
+                        <p class="lead">Montant de Mission : @Html.DisplayFor(model => model.DateDepart) </p>
+
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tr>
+                                    <th style="width:50%">
+                                        Frais Mission 1 :
+                                    </th>
+                                    <td>@Html.DisplayFor(model => model.FraisMission1)</td>
+                                </tr>
+                                <tr>
+                                    <th>Frais Mission 2 :</th>
+                                    <td>@Html.DisplayFor(model => model.FraisMission2)</td>
+                                </tr>
+                                <tr>
+                                    <th>Frais Mission 3 :</th>
+                                    <td>@Html.DisplayFor(model => model.FraisMission2)</td>
+                                </tr>
+                                <tr>
+                                    <th>@Html.DisplayNameFor(model => model.Total)</th>
+                                    <td>@Html.DisplayFor(model => model.Total)</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- ./wrapper -->
+    </div>
+
+
+    <script type="text/javascript">
+        n = new Date();
+        y = n.getFullYear();
+        m = n.getMonth() + 1;
+        d = n.getDate();
+        document.getElementById("date").innerHTML = d + "/" + m + "/" + y;
+        window.addEventListener("load", window.print());
+    </script>
+</body>
+</html>

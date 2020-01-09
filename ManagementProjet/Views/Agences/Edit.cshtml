@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Edit";
 }
+<br />
 <div class="container-fluid">
     <div class="row mb-2">
         <div class="col-sm-6">
@@ -20,21 +21,20 @@
     </div>
 </div>
 <div class="container-fluid">
-    <form asp-action="Edit">
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        <div class="row">
-            <!-- left column -->
-            <div class="col-md-6">
-                <!-- general form elements -->
-                <div class="card card-primary">
+    <div class="container-fluid">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="col-md-12">
+                <div class="card card-primary card-outline">
                     <div class="card-header">
-                        <h3 class="card-title">Agence</h3>
+                        <h3 class="card-title">
+                            <i class="fas fa-building"></i>
+                            information générale Agence
+                        </h3>
                     </div>
-                    <!-- /.card-header -->
-                    <!-- form start -->
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-sm-6">
+                            <div class="col-sm-4">
                                 <!-- text input -->
                                 <div class="form-group">
                                     <label>Text</label>
@@ -43,7 +43,7 @@
                                     <span asp-validation-for="code" class="text-danger"></span>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-sm-4">
                                 <div class="form-group">
                                     <label>Text</label>
                                     <label asp-for="libelle">libelle</label>
@@ -51,21 +51,29 @@
                                     <span asp-validation-for="libelle" class="text-danger"></span>
                                 </div>
                             </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label asp-for="proprietaire" class="control-label">Proprietaire</label>
+                                    <input asp-for="proprietaire" class="form-control" placeholder="Enter proprietaire" />
+                                    <span asp-validation-for="proprietaire" class="text-danger"></span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label asp-for="proprietaire" class="control-label">Proprietaire</label>
-                            <input asp-for="proprietaire" class="form-control" placeholder="Enter proprietaire" />
-                            <span asp-validation-for="proprietaire" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="capital">Capital</label>
-                            <input asp-for="capital" class="form-control" placeholder="Enter capital" />
-                            <span asp-validation-for="capital" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="MatFiscale" class="control-label"></label>
-                            <input asp-for="MatFiscale" class="form-control" placeholder="Enter Matricule Fiscale" />
-                            <span asp-validation-for="MatFiscale" class="text-danger"></span>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="capital">Capital</label>
+                                    <input asp-for="capital" class="form-control" placeholder="Enter capital" />
+                                    <span asp-validation-for="capital" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label asp-for="MatFiscale" class="control-label"></label>
+                                    <input asp-for="MatFiscale" class="form-control" placeholder="Enter Matricule Fiscale" />
+                                    <span asp-validation-for="MatFiscale" class="text-danger"></span>
+                                </div>
+                            </div>
                         </div>
                         <div class="form-group">
                             <label asp-for="Address">Addresse</label>
@@ -99,7 +107,6 @@
                             <div class="col-sm-6">
                                 <!-- text input -->
                                 <div class="form-group">
-                                    <label>Text</label>
                                     <label asp-for="email">Email</label>
                                     <input asp-for="email" type="text" class="form-control" placeholder="Enter Email">
                                     <span asp-validation-for="email" class="text-danger"></span>
@@ -114,76 +121,74 @@
                             </div>
                         </div>
                     </div>
-                    <!-- /.card-body -->
+                    <!-- /.card -->
                 </div>
-                <!-- /.card -->
             </div>
-            <!--/.col (left) -->
-            <!-- right column -->
-            <div class="col-md-6">
-                <!-- general form elements disabled -->
-                <div class="card card-warning">
+            <div class="col-md-12">
+                <div class="card card-primary card-outline">
                     <div class="card-header">
-                        <h3 class="card-title">Contact</h3>
+                        <h3 class="card-title">
+                            <i class="fas fa-id-card"></i>
+                            information générale Contact
+                        </h3>
                     </div>
-                    <!-- /.card-header -->
                     <div class="card-body">
-                        <div class="form-group">
-                            <label asp-for="Contact">Contact</label>
-                            <input asp-for="Contact" class="form-control" placeholder="Enter Contact" />
-                            <span asp-validation-for="Contact" class="text-danger"></span>
-                        </div>
                         <div class="row">
-                            <div class="col-sm-6">
-                                <!-- text input -->
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label asp-for="Contact">Contact</label>
+                                    <input asp-for="Contact" class="form-control" placeholder="Enter Contact" />
+                                    <span asp-validation-for="Contact" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
                                 <div class="form-group">
                                     <label asp-for="TelContact" class="control-label">Téléphone Contact</label>
                                     <input asp-for="TelContact" class="form-control" placeholder="Enter Téléphone" />
                                     <span asp-validation-for="TelContact" class="text-danger"></span>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
-                                <!-- text input -->
+                            <div class="col-sm-4">
                                 <div class="form-group">
                                     <label asp-for="GsmContact" class="control-label">Gsm Contact</label>
                                     <input asp-for="GsmContact" class="form-control" placeholder="Enter Gsm" />
                                     <span asp-validation-for="GsmContact" class="text-danger"></span>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <!-- text input -->
+                            <div class="col-sm-4">
                                 <div class="form-group">
                                     <label asp-for="MatCNSS">Matricule CNSS</label>
                                     <input asp-for="MatCNSS" class="form-control" placeholder="Enter Gsm" />
                                     <span asp-validation-for="MatCNSS" class="text-danger"></span>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-sm-4">
                                 <div class="form-group">
                                     <label asp-for="Smigar">Smigar</label>
                                     <input asp-for="Smigar" class="form-control" placeholder="Enter Smigar" />
                                     <span asp-validation-for="Smigar" class="text-danger"></span>
                                 </div>
                             </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label asp-for="Cnss">Cnss</label>
+                                    <input asp-for="Cnss" class="form-control" />
+                                    <span asp-validation-for="Cnss" class="text-danger"></span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label asp-for="Cnss">Cnss</label>
-                            <input asp-for="Cnss" class="form-control" />
-                            <span asp-validation-for="Cnss" class="text-danger"></span>
-                        </div>
-                        <!-- input states -->
                     </div>
-                    <!-- /.card-body -->
+                    <!-- /.card -->
                 </div>
-                <!-- /.card -->
-                <!-- general form elements disabled -->
-                <div class="card card-secondary">
+            </div>
+            <div class="col-md-12">
+                <div class="card card-primary card-outline">
                     <div class="card-header">
-                        <h3 class="card-title">Charge patronales %</h3>
+                        <h3 class="card-title">
+                            <i class="far fa-chart-bar"></i>
+                            Charge patronales %
+                        </h3>
                     </div>
-                    <!-- /.card-header -->
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-6">
@@ -222,17 +227,231 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <input type="submit" value="Create" class="btn btn-info btn-flat" />
-                        </div>
+                        <center>
+                            <div class="form-group">
+                                <input type="submit" value="Save" class="btn btn-info btn-flat" />
+                            </div>
+                        </center>
                     </div>
-                    <!-- /.card-body -->
                 </div>
                 <!-- /.card -->
             </div>
-            <!--/.col (right) -->
-        </div>
-    </form>
+        </form>
+        <br />
+    </div>
+    @*<form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row">
+                <!-- left column -->
+                <div class="col-md-6">
+                    <!-- general form elements -->
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">Agence</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- form start -->
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <!-- text input -->
+                                    <div class="form-group">
+                                        <label>Text</label>
+                                        <label asp-for="code">code</label>
+                                        <input asp-for="code" type="text" class="form-control" placeholder="Enter Code">
+                                        <span asp-validation-for="code" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>Text</label>
+                                        <label asp-for="libelle">libelle</label>
+                                        <input asp-for="libelle" type="text" class="form-control" placeholder="Enter libelle">
+                                        <span asp-validation-for="libelle" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="proprietaire" class="control-label">Proprietaire</label>
+                                <input asp-for="proprietaire" class="form-control" placeholder="Enter proprietaire" />
+                                <span asp-validation-for="proprietaire" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="capital">Capital</label>
+                                <input asp-for="capital" class="form-control" placeholder="Enter capital" />
+                                <span asp-validation-for="capital" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="MatFiscale" class="control-label"></label>
+                                <input asp-for="MatFiscale" class="form-control" placeholder="Enter Matricule Fiscale" />
+                                <span asp-validation-for="MatFiscale" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Address">Addresse</label>
+                                <textarea asp-for="Address" class="form-control" rows="3" placeholder="Enter Addresse"></textarea>
+                                <span asp-validation-for="Address" class="text-danger"></span>
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="form-group">
+                                        <label asp-for="Tel">Téléphone</label>
+                                        <input asp-for="Tel" class="form-control" placeholder="Tel" />
+                                        <span asp-validation-for="Tel" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="form-group">
+                                        <label asp-for="Fax">Fax</label>
+                                        <input asp-for="Fax" class="form-control" placeholder="Fax" />
+                                        <span asp-validation-for="Fax" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="form-group">
+                                        <label asp-for="Telecopie">Telecopie</label>
+                                        <input asp-for="Telecopie" class="form-control" placeholder="Telecopie" />
+                                        <span asp-validation-for="Telecopie" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <!-- text input -->
+                                    <div class="form-group">
+                                        <label>Text</label>
+                                        <label asp-for="email">Email</label>
+                                        <input asp-for="email" type="text" class="form-control" placeholder="Enter Email">
+                                        <span asp-validation-for="email" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label asp-for="AdrsUrl">Adresse Url</label>
+                                        <input asp-for="AdrsUrl" type="text" class="form-control" placeholder="Enter libelle">
+                                        <span asp-validation-for="AdrsUrl" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!--/.col (left) -->
+                <!-- right column -->
+                <div class="col-md-6">
+                    <!-- general form elements disabled -->
+                    <div class="card card-warning">
+                        <div class="card-header">
+                            <h3 class="card-title">Contact</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label asp-for="Contact">Contact</label>
+                                <input asp-for="Contact" class="form-control" placeholder="Enter Contact" />
+                                <span asp-validation-for="Contact" class="text-danger"></span>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <!-- text input -->
+                                    <div class="form-group">
+                                        <label asp-for="TelContact" class="control-label">Téléphone Contact</label>
+                                        <input asp-for="TelContact" class="form-control" placeholder="Enter Téléphone" />
+                                        <span asp-validation-for="TelContact" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <!-- text input -->
+                                    <div class="form-group">
+                                        <label asp-for="GsmContact" class="control-label">Gsm Contact</label>
+                                        <input asp-for="GsmContact" class="form-control" placeholder="Enter Gsm" />
+                                        <span asp-validation-for="GsmContact" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <!-- text input -->
+                                    <div class="form-group">
+                                        <label asp-for="MatCNSS">Matricule CNSS</label>
+                                        <input asp-for="MatCNSS" class="form-control" placeholder="Enter Gsm" />
+                                        <span asp-validation-for="MatCNSS" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label asp-for="Smigar">Smigar</label>
+                                        <input asp-for="Smigar" class="form-control" placeholder="Enter Smigar" />
+                                        <span asp-validation-for="Smigar" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Cnss">Cnss</label>
+                                <input asp-for="Cnss" class="form-control" />
+                                <span asp-validation-for="Cnss" class="text-danger"></span>
+                            </div>
+                            <!-- input states -->
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                    <!-- general form elements disabled -->
+                    <div class="card card-secondary">
+                        <div class="card-header">
+                            <h3 class="card-title">Charge patronales %</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <!-- Input -->
+                                    <div class="form-group">
+                                        <label asp-for="CnssEmployeur">Cnss Employeur</label>
+                                        <input asp-for="CnssEmployeur" class="form-control" placeholder="Enter Cnss" />
+                                        <span asp-validation-for="CnssEmployeur" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <!-- Input -->
+                                    <div class="form-group">
+                                        <label asp-for="Fiprolos">Fiprolos</label>
+                                        <input asp-for="Fiprolos" class="form-control" placeholder="Enter Fiprolos" />
+                                        <span asp-validation-for="Fiprolos" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <!-- Input -->
+                                    <div class="form-group">
+                                        <label asp-for="AccidentTravail">Accident Travail</label>
+                                        <input asp-for="AccidentTravail" class="form-control" placeholder="Enter Accident" />
+                                        <span asp-validation-for="AccidentTravail" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <!-- Input -->
+                                    <div class="form-group">
+                                        <label asp-for="Tfp">Tfp</label>
+                                        <input asp-for="Tfp" class="form-control" placeholder="Enter Tfp" />
+                                        <span asp-validation-for="Tfp" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Create" class="btn btn-info btn-flat" />
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!--/.col (right) -->
+            </div>
+        </form>*@
 
     <!-- /.row -->
 </div><!-- /.container-fluid -->
