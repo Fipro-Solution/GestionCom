@@ -30,7 +30,7 @@ namespace ManagementProjet.Data.Migrations
 
                     b.Property<string>("Address")
                         .IsRequired()
-                        .HasMaxLength(20);
+                        .HasMaxLength(1000);
 
                     b.Property<string>("AdrsUrl");
 
@@ -66,9 +66,6 @@ namespace ManagementProjet.Data.Migrations
                     b.Property<float?>("Tfp");
 
                     b.Property<decimal?>("capital");
-
-                    b.Property<string>("code")
-                        .IsRequired();
 
                     b.Property<string>("email")
                         .IsRequired();
@@ -269,9 +266,6 @@ namespace ManagementProjet.Data.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Address");
-
-                    b.Property<string>("Code")
-                        .IsRequired();
 
                     b.Property<string>("Comment");
 

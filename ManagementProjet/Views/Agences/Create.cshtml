@@ -33,40 +33,28 @@
                 </div>
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-sm-4">
-                            <!-- text input -->
+                        <div class="col-sm-3">
                             <div class="form-group">
-                                <label>Text</label>
-                                <label asp-for="code">code</label>
-                                <input asp-for="code" type="text" class="form-control" placeholder="Enter Code">
-                                <span asp-validation-for="code" class="text-danger"></span>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="form-group">
-                                <label>Text</label>
                                 <label asp-for="libelle">libelle</label>
                                 <input asp-for="libelle" type="text" class="form-control" placeholder="Enter libelle">
                                 <span asp-validation-for="libelle" class="text-danger"></span>
                             </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-3">
                             <div class="form-group">
                                 <label asp-for="proprietaire" class="control-label">Proprietaire</label>
                                 <input asp-for="proprietaire" class="form-control" placeholder="Enter proprietaire" />
                                 <span asp-validation-for="proprietaire" class="text-danger"></span>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-sm-3">
                             <div class="form-group">
                                 <label asp-for="capital">Capital</label>
                                 <input asp-for="capital" class="form-control" placeholder="Enter capital" />
                                 <span asp-validation-for="capital" class="text-danger"></span>
                             </div>
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-sm-3">
                             <div class="form-group">
                                 <label asp-for="MatFiscale" class="control-label"></label>
                                 <input asp-for="MatFiscale" class="form-control" placeholder="Enter Matricule Fiscale" />
@@ -237,7 +225,6 @@
         </div>
     </form>
     <br />
-</div>
     @*<form asp-action="Create">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <div class="row">

@@ -54,7 +54,7 @@ namespace ManagementProjet.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,code,libelle,proprietaire,capital,MatFiscale,Address,Tel,Fax,Telecopie,email,AdrsUrl,Contact,TelContact,GsmContact,MatCNSS,Smigar,Cnss,CnssEmployeur,Fiprolos,AccidentTravail,Tfp")] Agence agence)
+        public async Task<IActionResult> Create([Bind("Id,libelle,proprietaire,capital,MatFiscale,Address,Tel,Fax,Telecopie,email,AdrsUrl,Contact,TelContact,GsmContact,MatCNSS,Smigar,Cnss,CnssEmployeur,Fiprolos,AccidentTravail,Tfp")] Agence agence)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace ManagementProjet.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,code,libelle,proprietaire,capital,MatFiscale,Address,Tel,Fax,Telecopie,email,AdrsUrl,Contact,TelContact,GsmContact,MatCNSS,Smigar,Cnss,CnssEmployeur,Fiprolos,AccidentTravail,Tfp")] Agence agence)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,libelle,proprietaire,capital,MatFiscale,Address,Tel,Fax,Telecopie,email,AdrsUrl,Contact,TelContact,GsmContact,MatCNSS,Smigar,Cnss,CnssEmployeur,Fiprolos,AccidentTravail,Tfp")] Agence agence)
         {
             if (id != agence.Id)
             {

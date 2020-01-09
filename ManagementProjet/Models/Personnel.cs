@@ -14,10 +14,6 @@ namespace ManagementProjet.Models
         public int Id { get; set; }
 
         [Required]
-        [Display(Name = "Code")]
-        public string Code { get; set; }
-
-        [Required]
         [Display(Name = "Nom")]
         [MinLength(3)]
         [StringLength(20)]

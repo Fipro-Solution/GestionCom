@@ -14,9 +14,6 @@ namespace ManagementProjet.Models
         public int Id { get; set; }
 
         [Required]
-        public string code { get; set; }
-
-        [Required]
         [StringLength(20)]
         public string libelle { get; set; }
 
@@ -31,7 +28,7 @@ namespace ManagementProjet.Models
         [Display(Name ="Matricule Fiscale")]
         public string MatFiscale { get; set; }
         [Required]
-        [StringLength(20)]
+        [StringLength(1000)]
         [Display(Name = "Addresse")]
         public string Address { get; set; }
         [Required]

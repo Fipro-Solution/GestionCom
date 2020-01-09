@@ -3,7 +3,6 @@
 @{
     ViewData["Title"] = "Index";
     <link href="~/AdminTemplate/plugins/datatables-bs4/css/dataTables.bootstrap4.css" rel="stylesheet" />
-
 }
 
 <br />
@@ -22,9 +21,7 @@
                 <table id="example1" class="table table-bordered table-striped">
                     <thead>
                         <tr>
-                            <th>
-                                @Html.DisplayNameFor(model => model.code)
-                            </th>
+                            
                             <th>
                                 @Html.DisplayNameFor(model => model.libelle)
                             </th>
@@ -50,9 +47,6 @@
                         @foreach (var item in Model)
                         {
                         <tr>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.code)
-                            </td>
                             <td>
                                 @Html.DisplayFor(modelItem => item.libelle)
                             </td>

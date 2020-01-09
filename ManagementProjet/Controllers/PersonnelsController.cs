@@ -54,7 +54,7 @@ namespace ManagementProjet.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Code,Nom,Prenom,DateNais,LieuNais,NumCI,Address,Tache,MatCnss,Comment,Contrat,DebutC,FinC,Grade,Echelle,Echelon,PrimeCA,Salaire,DateSortie")] Personnel personnel)
+        public async Task<IActionResult> Create([Bind("Id,Nom,Prenom,DateNais,LieuNais,NumCI,Address,Tache,MatCnss,Comment,Contrat,DebutC,FinC,Grade,Echelle,Echelon,PrimeCA,Salaire,DateSortie")] Personnel personnel)
         {
             if (ModelState.IsValid)
             {
@@ -87,7 +87,7 @@ namespace ManagementProjet.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Code,Nom,Prenom,DateNais,LieuNais,NumCI,Address,Tache,MatCnss,Comment,Contrat,DebutC,FinC,Grade,Echelle,Echelon,PrimeCA,Salaire,DateSortie")] Personnel personnel)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nom,Prenom,DateNais,LieuNais,NumCI,Address,Tache,MatCnss,Comment,Contrat,DebutC,FinC,Grade,Echelle,Echelon,PrimeCA,Salaire,DateSortie")] Personnel personnel)
         {
             if (id != personnel.Id)
             {
